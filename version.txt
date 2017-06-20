@@ -2,9 +2,12 @@ project of freertos on stm32f103 on cubemx
 
 01 : Create a RTOS project in cubemx plus trace snap
 
-02 : add prinf function
+02 : add printf
 
-03 : add one adc, 1ms product one adc
+ 
 
+03 : add one adc
 
-04 : add two adc, sequence output
+04 : add two adc
+
+05 : add temperature sensor of mcu,and voltage sensor
