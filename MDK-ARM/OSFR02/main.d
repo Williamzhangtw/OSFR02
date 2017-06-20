@@ -54,5 +54,6 @@ osfr02\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 osfr02\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 osfr02\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 osfr02\main.o: ../Inc/adc.h
+osfr02\main.o: ../Inc/dma.h
 osfr02\main.o: ../Inc/usart.h
 osfr02\main.o: ../Inc/gpio.h

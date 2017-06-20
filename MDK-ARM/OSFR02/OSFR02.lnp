@@ -7,6 +7,7 @@
 "osfr02\main.o"
 "osfr02\stm32f1xx_hal_msp.o"
 "osfr02\adc.o"
+"osfr02\dma.o"
 "osfr02\system_stm32f1xx.o"
 "osfr02\startup_stm32f103xe.o"
 "osfr02\cmsis_os.o"

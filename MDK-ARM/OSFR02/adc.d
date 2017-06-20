@@ -31,3 +31,4 @@ osfr02\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 osfr02\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 osfr02\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 osfr02\adc.o: ../Inc/gpio.h
+osfr02\adc.o: ../Inc/dma.h

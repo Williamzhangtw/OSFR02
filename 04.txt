@@ -1,0 +1,38 @@
+04 : add two adc, sequence output
+
+
+pay  attention:
+
+
+type 1 (adc not circle, dma not circle)
+     |
+adc init				
+     |
+start dma (must use in sequencer mode)<-|
+     |
+adc start				|
+     |
+waitting until it is done		|
+     |
+get the adc data                 	^
+     |
+wait    (higher interrupt periority     |
+     |
+      - - - - - - > - - - - - - - - - - >
+
+
+type 2 (adc circle, dma circle)
+     |
+adc init				
+     |
+start dma                           
+     |
+adc start				
+     |
+waitting until it is done   < - -<-  -	-	
+     |
+get the adc data                	^
+     |
+wait (higher interrupt periority        |			
+     |
+      - - - - - - > - - - - - - - - - - >

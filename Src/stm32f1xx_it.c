@@ -37,10 +37,11 @@
 #include "cmsis_os.h"
 
 /* USER CODE BEGIN 0 */
-
+extern volatile uint16_t uiADC[3];
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern DMA_HandleTypeDef hdma_adc1;
 
 extern TIM_HandleTypeDef htim6;
 
@@ -158,6 +159,22 @@ void SysTick_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f1xx.s).                    */
 /******************************************************************************/
+
+/**
+* @brief This function handles DMA1 channel1 global interrupt.
+*/
+void DMA1_Channel1_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
+ traceString DMA_ITchannel = xTraceRegisterString("DMA_Interrupt");
+  vTracePrint(DMA_ITchannel,"I am in");
+  /* USER CODE END DMA1_Channel1_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_adc1);
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
+ 
+  vTracePrint(DMA_ITchannel,"I am out");
+  /* USER CODE END DMA1_Channel1_IRQn 1 */
+}
 
 /**
 * @brief This function handles TIM6 global interrupt.

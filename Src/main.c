@@ -50,6 +50,7 @@
 #include "stm32f1xx_hal.h"
 #include "cmsis_os.h"
 #include "adc.h"
+#include "dma.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -102,12 +103,22 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_USART2_UART_Init();
   MX_ADC1_Init();
 
   /* USER CODE BEGIN 2 */
   printf("Hello world!\n");
+  /* Init only, trace starts later...*/
+  vTraceEnable(TRC_INIT);
   vTraceEnable(TRC_START);
+
+  /* In a task or ISR */
+ // vTraceEnable(TRC_START);
+
+//void vTraceStop(void)
+
+
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
