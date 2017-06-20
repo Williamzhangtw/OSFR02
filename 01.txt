@@ -1,0 +1,62 @@
+//OSFR0001  Focus on how to integrate FreeRTOS in to keil MDK project
+
+
+
+	Additions:
+	download the FreeRTOS documentation http://www.freertos.org/a00104.html
+	1.<mastering  the freertos real time kernel - a hands on tutorial guide>
+	2.<freertos v9.0.0 reference manual>
+
+	accroading to the <freertos v9.0.0 reference manual> On creating a new project from a scratch 
+	need to be created using the following procedure.
+		2.1. ensure the new project can be built,downloaded,and executed
+			in my case,I am using the keil mdk with stm32f103RB,and the 
+			More detail
+			-using stm32CUBEMX
+			-using TIM1 for systemclock
+			-didn't generate system tick timer handler and pendable request for system service handler 
+			-using stlink which has been converted to jlink.
+		2.2.unzip the file from source we download before and put all the file into our project,but few things we need is shown below
+			-FreeRTOS/Source(below is the files in it)
+				-tasks.c
+				-quene.c
+				-list.c
+			-FreeRTOS\Source\portable\RVDS\ARM_CM3(below is the files in it) /*FreeRTOS/Source/portable/[compiler]/[architecture]*/
+				-port.c
+				-portmacro.h
+			-FreeRTOS/Source/portable/MemMang(below is the files in it)
+				-heap_n.c(n can be either 1,2,3,4 or 5)
+			-FreeRTOS/Source/(below is the files in it)
+
+step1:
+get the FREERTOS Souces code.http://www.freertos.org/a00104.html		
+		
+step2:
+add src
+
+step3:
+add FreeRTOSConfig.h and configured
+
+step4:
+modify the startup_stm32f10x_md.c(Startup):
+  　__heap_limit
+　PRESERVE8
+　THUMB
+
+　IMPORT xPortPendSVHandler
+　IMPORT xPortSysTickHandler
+　IMPORT vPortSVCHandler
+
+　DCD SVC_Handler -> DCD vPortSVCHandler
+　DCD PendSV_Handler -> DCD xPortPendSVHandler
+　DCD SysTick_Handler -> DCD xPortSysTickHandler
+
+step5: 
+application
+	add FreeRTOS.h and task.h into 
+	create task and start vTaskStartScheduler()
+
+
+
+more detail...
+see in this link:http://www.freertos.org/Creating-a-new-FreeRTOS-project.html
