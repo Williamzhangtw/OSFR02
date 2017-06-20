@@ -104,7 +104,8 @@ int main(void)
   MX_USART2_UART_Init();
 
   /* USER CODE BEGIN 2 */
-   vTraceEnable(TRC_START);
+  printf("Hello world!\n");
+  vTraceEnable(TRC_START);
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

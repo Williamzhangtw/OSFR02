@@ -1,0 +1,5 @@
+project of freertos on stm32f103 on cubemx
+
+01 : Create a RTOS project in cubemx plus trace snap
+
+02 : add printf function and setup task function. task1, blink led1, task2,blink led2 .....

@@ -135,10 +135,13 @@ void StartDefaultTask(void const * argument)
 {
 
   /* USER CODE BEGIN StartDefaultTask */
+  
+  
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
+    osDelay(100);
   }
   /* USER CODE END StartDefaultTask */
 }
@@ -150,7 +153,8 @@ void StartTask02(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    HAL_GPIO_TogglePin(LED2_GPIO_Port,LED2_Pin);
+    osDelay(100);
   }
   /* USER CODE END StartTask02 */
 }
@@ -162,7 +166,8 @@ void StartTask03(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    HAL_GPIO_TogglePin(LED3_GPIO_Port,LED3_Pin);
+    osDelay(100);
   }
   /* USER CODE END StartTask03 */
 }
@@ -174,7 +179,8 @@ void StartTask04(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    HAL_GPIO_TogglePin(LED4_GPIO_Port,LED4_Pin);
+    osDelay(100);
   }
   /* USER CODE END StartTask04 */
 }
@@ -186,7 +192,8 @@ void StartTask05(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    printf("everything is fine\n");
+    osDelay(500);
   }
   /* USER CODE END StartTask05 */
 }
