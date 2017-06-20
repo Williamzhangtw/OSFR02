@@ -28,6 +28,8 @@ osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
 osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h
 osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
 osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
+osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h
+osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h
 osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
@@ -51,3 +53,4 @@ osfr02\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 osfr02\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 osfr02\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 osfr02\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+osfr02\freertos.o: ../Inc/adc.h

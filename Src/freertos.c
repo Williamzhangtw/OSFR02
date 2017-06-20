@@ -52,7 +52,7 @@
 #include "cmsis_os.h"
 
 /* USER CODE BEGIN Includes */     
-
+#include "adc.h"
 /* USER CODE END Includes */
 
 /* Variables -----------------------------------------------------------------*/
@@ -61,9 +61,11 @@ osThreadId myTask02Handle;
 osThreadId myTask03Handle;
 osThreadId myTask04Handle;
 osThreadId myTask05Handle;
+osThreadId sensor1TaskHandle;
 
 /* USER CODE BEGIN Variables */
-
+uint8_t  cPrint[1024];
+volatile uint16_t uiADC;
 /* USER CODE END Variables */
 
 /* Function prototypes -------------------------------------------------------*/
@@ -72,6 +74,7 @@ void StartTask02(void const * argument);
 void StartTask03(void const * argument);
 void StartTask04(void const * argument);
 void StartTask05(void const * argument);
+void StartTask06(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -106,20 +109,24 @@ void MX_FREERTOS_Init(void) {
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of myTask02 */
-  osThreadDef(myTask02, StartTask02, osPriorityIdle, 0, 128);
+  osThreadDef(myTask02, StartTask02, osPriorityNormal, 0, 128);
   myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
 
   /* definition and creation of myTask03 */
-  osThreadDef(myTask03, StartTask03, osPriorityIdle, 0, 128);
+  osThreadDef(myTask03, StartTask03, osPriorityNormal, 0, 128);
   myTask03Handle = osThreadCreate(osThread(myTask03), NULL);
 
   /* definition and creation of myTask04 */
-  osThreadDef(myTask04, StartTask04, osPriorityIdle, 0, 128);
+  osThreadDef(myTask04, StartTask04, osPriorityNormal, 0, 128);
   myTask04Handle = osThreadCreate(osThread(myTask04), NULL);
 
   /* definition and creation of myTask05 */
-  osThreadDef(myTask05, StartTask05, osPriorityIdle, 0, 128);
+  osThreadDef(myTask05, StartTask05, osPriorityNormal, 0, 128);
   myTask05Handle = osThreadCreate(osThread(myTask05), NULL);
+
+  /* definition and creation of sensor1Task */
+  osThreadDef(sensor1Task, StartTask06, osPriorityAboveNormal, 0, 128);
+  sensor1TaskHandle = osThreadCreate(osThread(sensor1Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -192,10 +199,24 @@ void StartTask05(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    printf("everything is fine\n");
+    printf("adc :%d \n",uiADC);
     osDelay(500);
   }
   /* USER CODE END StartTask05 */
+}
+
+/* StartTask06 function */
+void StartTask06(void const * argument)
+{
+  /* USER CODE BEGIN StartTask06 */
+  HAL_ADC_Start(&hadc1);
+  /* Infinite loop */
+  for(;;)
+  {
+    uiADC = HAL_ADC_GetValue(&hadc1);
+    osDelay(1);
+  }
+  /* USER CODE END StartTask06 */
 }
 
 /* USER CODE BEGIN Application */

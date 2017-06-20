@@ -1,0 +1,8 @@
+
+03 : add one adc, 1ms product one adc
+
+--> cube configure
+	-continue mode
+	-1 rank
+
+--> app : 1ms execute once
