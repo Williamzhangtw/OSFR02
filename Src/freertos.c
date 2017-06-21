@@ -53,6 +53,8 @@
 
 /* USER CODE BEGIN Includes */     
 #include "adc.h"
+#include "solder.h"
+#include "usart.h"
 /* USER CODE END Includes */
 
 /* Variables -----------------------------------------------------------------*/
@@ -200,6 +202,9 @@ __weak void vLed1Task(void const * argument)
   for(;;)
   {
     HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
+  //  if(HAL_UART_Receive(&UartHandle, (uint8_t *)aRxBuffer, RXBUFFERSIZE, 0xFFFFFFF) != HAL_OK)
+ //   HAL_UART_Transmit(&huart2,(uint8_t *)uiADC,3,0xfffff);
+   // HAL_UART_Transmit(&huart2,(uint8_t *)uiADC,3,0xfffff);
     osDelay(10);
   }
   /* USER CODE END vLed1Task */
@@ -256,9 +261,19 @@ void vPrintfTask(void const * argument)
     //VOL  uiADC[3]
 //    printf("Temperature now: %d \n",COMPUTATION_TEMPERATURE_STD_PARAMS(uiADC[2]));
 //    printf("voltage now: %d \n",COMPUTATION_DIGITAL_12BITS_TO_VOLTAGE(uiADC[3]));
-    printf("Temperature now: %d \n",(uiADC[0]));
-    printf("voltage now: %d \n",(uiADC[3]));
+//    printf("Temperature now: %d \n",(uiADC[0]));
+//    printf("voltage now: %d \n",(uiADC[3]));
+    printf("realTemp: %d \n",realTemp);
+//    char _ok[] = "OK";
+//    HAL_StatusTypeDef state;
+//    state = HAL_UART_Transmit_IT(&huart2,(uint8_t *)_ok, 1) ;
+//    if (state  != HAL_OK)
+//    {
+//       traceString UART_Error = xTraceRegisterString("UART_STATE");
+//       vTracePrintF(UART_Error,"ERROR %d",state);
+//    }
     osDelay(500);
+   
   }
   /* USER CODE END vPrintfTask */
 }
@@ -282,7 +297,7 @@ if (HAL_ADC_Start_DMA(&hadc1,
   {
     HAL_ADC_Start(&hadc1);
     HAL_ADC_PollForConversion(&hadc1,0xff); 
-    
+    vTempCtrl(uiADC[0]);
 //    uiADC = HAL_ADC_GetValue(&hadc1);
     osDelay(1);
   /* USER CODE END vSensor1Task */

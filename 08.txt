@@ -1,0 +1,11 @@
+***********get the data from PC by uart.********
+
+********uart change to IT ***********
+
+HAL_UART_Receive();
+ |
+
+
+FAIL 
+
+ADD trace for RTOS

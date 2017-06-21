@@ -166,13 +166,13 @@ void SysTick_Handler(void)
 void DMA1_Channel1_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
- traceString DMA_ITchannel = xTraceRegisterString("DMA_Interrupt");
-  vTracePrint(DMA_ITchannel,"I am in");
+// traceString DMA_ITchannel = xTraceRegisterString("DMA_Interrupt");
+//  vTracePrint(DMA_ITchannel,"I am in");
   /* USER CODE END DMA1_Channel1_IRQn 0 */
   HAL_DMA_IRQHandler(&hdma_adc1);
   /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
  
-  vTracePrint(DMA_ITchannel,"I am out");
+//  vTracePrint(DMA_ITchannel,"I am out");
   /* USER CODE END DMA1_Channel1_IRQn 1 */
 }
 

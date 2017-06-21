@@ -1,0 +1,15 @@
+***********ADD streaming trace for RTOS********
+
+--> add segger_rtt.c and segger_rtt_printf.c
+
+--> add include file to the project
+
+--> modify the configuration in trcRecorder.h
+ 	-TRC_RECORDER_MODE_STREAMING
+
+-->ADD vTraceEnable(TRC_START_AWAIT_HOST); to the main.c before execute the any function of freertos
+
+
+--> download the code to your device, it will run until you trigger it
+
+--> open the percepio software, then click the button of start trace to tigger the hardware.

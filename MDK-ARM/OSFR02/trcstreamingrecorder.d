@@ -33,8 +33,11 @@ osfr02\trcstreamingrecorder.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal
 osfr02\trcstreamingrecorder.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 osfr02\trcstreamingrecorder.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 osfr02\trcstreamingrecorder.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-osfr02\trcstreamingrecorder.o: ../Inc/trcSnapshotConfig.h
+osfr02\trcstreamingrecorder.o: ../Inc/trcStreamingConfig.h
 osfr02\trcstreamingrecorder.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h
+osfr02\trcstreamingrecorder.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h
+osfr02\trcstreamingrecorder.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h
+osfr02\trcstreamingrecorder.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h
 osfr02\trcstreamingrecorder.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h
 osfr02\trcstreamingrecorder.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 osfr02\trcstreamingrecorder.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

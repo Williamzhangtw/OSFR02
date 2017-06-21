@@ -68,6 +68,8 @@
 #define UART2_TX_GPIO_Port GPIOA
 #define UART2_RX_Pin GPIO_PIN_3
 #define UART2_RX_GPIO_Port GPIOA
+#define HEAT_Pin GPIO_PIN_5
+#define HEAT_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 

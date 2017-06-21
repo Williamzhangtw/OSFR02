@@ -37,8 +37,11 @@ osfr02\timers.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 osfr02\timers.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 osfr02\timers.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 osfr02\timers.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-osfr02\timers.o: ../Inc/trcSnapshotConfig.h
+osfr02\timers.o: ../Inc/trcStreamingConfig.h
 osfr02\timers.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h
+osfr02\timers.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h
+osfr02\timers.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h
+osfr02\timers.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h
 osfr02\timers.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h
 osfr02\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 osfr02\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

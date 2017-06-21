@@ -36,8 +36,11 @@ osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 osfr02\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-osfr02\freertos.o: ../Inc/trcSnapshotConfig.h
+osfr02\freertos.o: ../Inc/trcStreamingConfig.h
 osfr02\freertos.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h
+osfr02\freertos.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h
+osfr02\freertos.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h
+osfr02\freertos.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h
 osfr02\freertos.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h
 osfr02\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 osfr02\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
@@ -54,3 +57,5 @@ osfr02\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 osfr02\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 osfr02\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 osfr02\freertos.o: ../Inc/adc.h
+osfr02\freertos.o: ../Inc/solder.h
+osfr02\freertos.o: ../Inc/usart.h

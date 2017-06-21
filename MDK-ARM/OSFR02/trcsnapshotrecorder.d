@@ -33,8 +33,11 @@ osfr02\trcsnapshotrecorder.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_
 osfr02\trcsnapshotrecorder.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 osfr02\trcsnapshotrecorder.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 osfr02\trcsnapshotrecorder.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-osfr02\trcsnapshotrecorder.o: ../Inc/trcSnapshotConfig.h
+osfr02\trcsnapshotrecorder.o: ../Inc/trcStreamingConfig.h
 osfr02\trcsnapshotrecorder.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h
+osfr02\trcsnapshotrecorder.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h
+osfr02\trcsnapshotrecorder.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h
+osfr02\trcsnapshotrecorder.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h
 osfr02\trcsnapshotrecorder.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h
 osfr02\trcsnapshotrecorder.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 osfr02\trcsnapshotrecorder.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
@@ -45,4 +48,3 @@ osfr02\trcsnapshotrecorder.o: ../Middlewares/Third_Party/FreeRTOS/Source/include
 osfr02\trcsnapshotrecorder.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
 osfr02\trcsnapshotrecorder.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
 osfr02\trcsnapshotrecorder.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-osfr02\trcsnapshotrecorder.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

@@ -1,16 +1,16 @@
 Dependencies for Project 'OSFR02', Target 'OSFR02': (DO NOT MODIFY !)
-F (../Src/freertos.c)(0x5949811B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\freertos.o --omf_browse osfr02\freertos.crf --depend osfr02\freertos.d)
+F (../Src/freertos.c)(0x594AAD9B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\freertos.o --omf_browse osfr02\freertos.crf --depend osfr02\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
+I (../Inc/main.h)(0x594AAD9C)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -36,8 +36,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -51,11 +54,13 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x59343C13)
-I (../Inc/adc.h)(0x59497A4D)
-F (../Src/stm32f1xx_hal_timebase_TIM.c)(0x59497A61)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_timebase_tim.o --omf_browse osfr02\stm32f1xx_hal_timebase_tim.crf --depend osfr02\stm32f1xx_hal_timebase_tim.d)
+I (../Inc/adc.h)(0x594AAD9A)
+I (../Inc/solder.h)(0x594A722A)
+I (../Inc/usart.h)(0x594AAD9B)
+F (../Src/stm32f1xx_hal_timebase_TIM.c)(0x594AAD9C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_timebase_tim.o --omf_browse osfr02\stm32f1xx_hal_timebase_tim.crf --depend osfr02\stm32f1xx_hal_timebase_tim.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -82,11 +87,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Src/usart.c)(0x59497A5C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\usart.o --omf_browse osfr02\usart.crf --depend osfr02\usart.d)
-I (../Inc/usart.h)(0x59497A5D)
+F (../Src/usart.c)(0x594AAD9B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\usart.o --omf_browse osfr02\usart.crf --depend osfr02\usart.d)
+I (../Inc/usart.h)(0x594AAD9B)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -113,11 +118,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/gpio.h)(0x59497A4A)
-F (../Src/stm32f1xx_it.c)(0x59497A5E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_it.o --omf_browse osfr02\stm32f1xx_it.crf --depend osfr02\stm32f1xx_it.d)
+I (../Inc/gpio.h)(0x594AAD99)
+F (../Src/stm32f1xx_it.c)(0x594AAD9B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_it.o --omf_browse osfr02\stm32f1xx_it.crf --depend osfr02\stm32f1xx_it.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -144,17 +149,20 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/stm32f1xx_it.h)(0x59497A5E)
+I (../Inc/stm32f1xx_it.h)(0x594AAD9B)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -167,11 +175,11 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x59343C13)
-F (../Src/gpio.c)(0x59497A4A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\gpio.o --omf_browse osfr02\gpio.crf --depend osfr02\gpio.d)
-I (../Inc/gpio.h)(0x59497A4A)
+F (../Src/gpio.c)(0x594AAD99)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\gpio.o --omf_browse osfr02\gpio.crf --depend osfr02\gpio.d)
+I (../Inc/gpio.h)(0x594AAD99)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -198,10 +206,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Src/main.c)(0x59497A65)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\main.o --omf_browse osfr02\main.crf --depend osfr02\main.d)
-I (../Inc/main.h)(0x59497A64)
+F (../Src/main.c)(0x594AAD9D)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\main.o --omf_browse osfr02\main.crf --depend osfr02\main.d)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -231,13 +239,16 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -250,14 +261,14 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x59343C13)
-I (../Inc/adc.h)(0x59497A4D)
-I (../Inc/dma.h)(0x59497A50)
-I (../Inc/usart.h)(0x59497A5D)
-I (../Inc/gpio.h)(0x59497A4A)
-F (../Src/stm32f1xx_hal_msp.c)(0x59497A60)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_msp.o --omf_browse osfr02\stm32f1xx_hal_msp.crf --depend osfr02\stm32f1xx_hal_msp.d)
+I (../Inc/adc.h)(0x594AAD9A)
+I (../Inc/dma.h)(0x594AAD9A)
+I (../Inc/usart.h)(0x594AAD9B)
+I (../Inc/gpio.h)(0x594AAD99)
+F (../Src/stm32f1xx_hal_msp.c)(0x594AAD9C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_msp.o --omf_browse osfr02\stm32f1xx_hal_msp.crf --depend osfr02\stm32f1xx_hal_msp.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -284,11 +295,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Src/adc.c)(0x59497A4B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\adc.o --omf_browse osfr02\adc.crf --depend osfr02\adc.d)
-I (../Inc/adc.h)(0x59497A4D)
+F (../Src/adc.c)(0x594AAD9A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\adc.o --omf_browse osfr02\adc.crf --depend osfr02\adc.d)
+I (../Inc/adc.h)(0x594AAD9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -315,13 +326,13 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/gpio.h)(0x59497A4A)
-I (../Inc/dma.h)(0x59497A50)
-F (../Src/dma.c)(0x59497A4D)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\dma.o --omf_browse osfr02\dma.crf --depend osfr02\dma.d)
-I (../Inc/dma.h)(0x59497A50)
+I (../Inc/gpio.h)(0x594AAD99)
+I (../Inc/dma.h)(0x594AAD9A)
+F (../Src/dma.c)(0x594AAD9A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\dma.o --omf_browse osfr02\dma.crf --depend osfr02\dma.d)
+I (../Inc/dma.h)(0x594AAD9A)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -348,7 +359,38 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Src/system_stm32f1xx.c)(0x59343C0D)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\system_stm32f1xx.o --omf_browse osfr02\system_stm32f1xx.crf --depend osfr02\system_stm32f1xx.d)
+F (..\Src\solder.c)(0x594A7366)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\solder.o --omf_browse osfr02\solder.crf --depend osfr02\solder.d)
+I (../Inc/solder.h)(0x594A722A)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h)(0x59343C0D)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x59343C10)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x59343C10)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x59343C10)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x59343C10)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x59343C0D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x59343C10)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
+F (../Src/system_stm32f1xx.c)(0x59343C0D)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\system_stm32f1xx.o --omf_browse osfr02\system_stm32f1xx.crf --depend osfr02\system_stm32f1xx.d)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h)(0x59343C0D)
 I (../Drivers/CMSIS/Include/core_cm3.h)(0x59343C10)
@@ -358,8 +400,8 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x59343C10)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x59343C0D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x59343C10)
@@ -378,8 +420,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (startup_stm32f103xe.s)(0x59497A68)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\Inc-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "STM32F10X_HD SETA 1"--list startup_stm32f103xe.lst --xref -o osfr02\startup_stm32f103xe.o --depend osfr02\startup_stm32f103xe.d)
-F (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\cmsis_os.o --omf_browse osfr02\cmsis_os.crf --depend osfr02\cmsis_os.d)
+F (startup_stm32f103xe.s)(0x594AADA1)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\Inc-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "STM32F10X_HD SETA 1"--list startup_stm32f103xe.lst --xref -o osfr02\startup_stm32f103xe.o --depend osfr02\startup_stm32f103xe.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\cmsis_os.o --omf_browse osfr02\cmsis_os.crf --depend osfr02\cmsis_os.d)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -387,14 +429,14 @@ I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x59343C10)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x59343C10)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
+I (../Inc/main.h)(0x594AAD9C)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -418,8 +460,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -432,19 +477,19 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x59343C13)
-F (../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\event_groups.o --omf_browse osfr02\event_groups.crf --depend osfr02\event_groups.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\event_groups.o --omf_browse osfr02\event_groups.crf --depend osfr02\event_groups.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
+I (../Inc/main.h)(0x594AAD9C)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -470,8 +515,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -482,18 +530,18 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x59343C13)
-F (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\port.o --omf_browse osfr02\port.crf --depend osfr02\port.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\port.o --omf_browse osfr02\port.crf --depend osfr02\port.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
+I (../Inc/main.h)(0x594AAD9C)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -519,8 +567,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -529,18 +580,18 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x59343C13)
-F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\croutine.o --omf_browse osfr02\croutine.crf --depend osfr02\croutine.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\croutine.o --omf_browse osfr02\croutine.crf --depend osfr02\croutine.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
+I (../Inc/main.h)(0x594AAD9C)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -566,8 +617,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -577,19 +631,19 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x59343C13
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h)(0x59343C13)
-F (../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\heap_4.o --omf_browse osfr02\heap_4.crf --depend osfr02\heap_4.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\heap_4.o --omf_browse osfr02\heap_4.crf --depend osfr02\heap_4.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
+I (../Inc/main.h)(0x594AAD9C)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -615,8 +669,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -625,20 +682,20 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x59343C13)
-F (../Middlewares/Third_Party/FreeRTOS/Source/queue.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\queue.o --omf_browse osfr02\queue.crf --depend osfr02\queue.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/queue.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\queue.o --omf_browse osfr02\queue.crf --depend osfr02\queue.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
+I (../Inc/main.h)(0x594AAD9C)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -664,8 +721,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -675,20 +735,20 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x59343C13
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x59343C13)
-F (../Middlewares/Third_Party/FreeRTOS/Source/tasks.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\tasks.o --omf_browse osfr02\tasks.crf --depend osfr02\tasks.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/tasks.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\tasks.o --omf_browse osfr02\tasks.crf --depend osfr02\tasks.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
+I (../Inc/main.h)(0x594AAD9C)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -714,8 +774,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -726,19 +789,19 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h)(0x59343C13)
-F (../Middlewares/Third_Party/FreeRTOS/Source/list.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\list.o --omf_browse osfr02\list.crf --depend osfr02\list.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/list.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\list.o --omf_browse osfr02\list.crf --depend osfr02\list.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
+I (../Inc/main.h)(0x594AAD9C)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -764,8 +827,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -773,19 +839,19 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(
 I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x59343C13)
-F (../Middlewares/Third_Party/FreeRTOS/Source/timers.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\timers.o --omf_browse osfr02\timers.crf --depend osfr02\timers.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/timers.c)(0x59343C13)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\timers.o --omf_browse osfr02\timers.crf --depend osfr02\timers.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
+I (../Inc/main.h)(0x594AAD9C)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -811,8 +877,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -823,10 +892,10 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x59343C13)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_uart.o --omf_browse osfr02\stm32f1xx_hal_uart.crf --depend osfr02\stm32f1xx_hal_uart.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_uart.o --omf_browse osfr02\stm32f1xx_hal_uart.crf --depend osfr02\stm32f1xx_hal_uart.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -853,10 +922,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal.o --omf_browse osfr02\stm32f1xx_hal.crf --depend osfr02\stm32f1xx_hal.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal.o --omf_browse osfr02\stm32f1xx_hal.crf --depend osfr02\stm32f1xx_hal.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -883,10 +952,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_dma.o --omf_browse osfr02\stm32f1xx_hal_dma.crf --depend osfr02\stm32f1xx_hal_dma.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_dma.o --omf_browse osfr02\stm32f1xx_hal_dma.crf --depend osfr02\stm32f1xx_hal_dma.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -913,10 +982,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_rcc.o --omf_browse osfr02\stm32f1xx_hal_rcc.crf --depend osfr02\stm32f1xx_hal_rcc.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_rcc.o --omf_browse osfr02\stm32f1xx_hal_rcc.crf --depend osfr02\stm32f1xx_hal_rcc.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -943,10 +1012,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_gpio.o --omf_browse osfr02\stm32f1xx_hal_gpio.crf --depend osfr02\stm32f1xx_hal_gpio.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_gpio.o --omf_browse osfr02\stm32f1xx_hal_gpio.crf --depend osfr02\stm32f1xx_hal_gpio.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -973,10 +1042,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_pwr.o --omf_browse osfr02\stm32f1xx_hal_pwr.crf --depend osfr02\stm32f1xx_hal_pwr.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_pwr.o --omf_browse osfr02\stm32f1xx_hal_pwr.crf --depend osfr02\stm32f1xx_hal_pwr.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1003,10 +1072,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_flash.o --omf_browse osfr02\stm32f1xx_hal_flash.crf --depend osfr02\stm32f1xx_hal_flash.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_flash.o --omf_browse osfr02\stm32f1xx_hal_flash.crf --depend osfr02\stm32f1xx_hal_flash.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1033,10 +1102,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_tim_ex.o --omf_browse osfr02\stm32f1xx_hal_tim_ex.crf --depend osfr02\stm32f1xx_hal_tim_ex.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_tim_ex.o --omf_browse osfr02\stm32f1xx_hal_tim_ex.crf --depend osfr02\stm32f1xx_hal_tim_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1063,10 +1132,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_cortex.o --omf_browse osfr02\stm32f1xx_hal_cortex.crf --depend osfr02\stm32f1xx_hal_cortex.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_cortex.o --omf_browse osfr02\stm32f1xx_hal_cortex.crf --depend osfr02\stm32f1xx_hal_cortex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1093,10 +1162,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_flash_ex.o --omf_browse osfr02\stm32f1xx_hal_flash_ex.crf --depend osfr02\stm32f1xx_hal_flash_ex.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_flash_ex.o --omf_browse osfr02\stm32f1xx_hal_flash_ex.crf --depend osfr02\stm32f1xx_hal_flash_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1123,10 +1192,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_tim.o --omf_browse osfr02\stm32f1xx_hal_tim.crf --depend osfr02\stm32f1xx_hal_tim.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_tim.o --omf_browse osfr02\stm32f1xx_hal_tim.crf --depend osfr02\stm32f1xx_hal_tim.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1153,10 +1222,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_rcc_ex.o --omf_browse osfr02\stm32f1xx_hal_rcc_ex.crf --depend osfr02\stm32f1xx_hal_rcc_ex.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_rcc_ex.o --omf_browse osfr02\stm32f1xx_hal_rcc_ex.crf --depend osfr02\stm32f1xx_hal_rcc_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1183,10 +1252,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_gpio_ex.o --omf_browse osfr02\stm32f1xx_hal_gpio_ex.crf --depend osfr02\stm32f1xx_hal_gpio_ex.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_gpio_ex.o --omf_browse osfr02\stm32f1xx_hal_gpio_ex.crf --depend osfr02\stm32f1xx_hal_gpio_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1213,10 +1282,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_adc.o --omf_browse osfr02\stm32f1xx_hal_adc.crf --depend osfr02\stm32f1xx_hal_adc.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_adc.o --omf_browse osfr02\stm32f1xx_hal_adc.crf --depend osfr02\stm32f1xx_hal_adc.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1243,10 +1312,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_adc_ex.o --omf_browse osfr02\stm32f1xx_hal_adc_ex.crf --depend osfr02\stm32f1xx_hal_adc_ex.d)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c)(0x59343C10)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\stm32f1xx_hal_adc_ex.o --omf_browse osfr02\stm32f1xx_hal_adc_ex.crf --depend osfr02\stm32f1xx_hal_adc_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1273,15 +1342,15 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-F (..\Middlewares\Third_Party\Tracelyzer\trcSnapshotRecorder.c)(0x593012D6)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\trcsnapshotrecorder.o --omf_browse osfr02\trcsnapshotrecorder.crf --depend osfr02\trcsnapshotrecorder.d)
+F (..\Middlewares\Third_Party\Tracelyzer\trcSnapshotRecorder.c)(0x593012D6)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\trcsnapshotrecorder.o --omf_browse osfr02\trcsnapshotrecorder.crf --depend osfr02\trcsnapshotrecorder.d)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1307,30 +1376,32 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x59343C13)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\Middlewares\Third_Party\Tracelyzer\trcKernelPort.c)(0x58F9AF6E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\trckernelport.o --omf_browse osfr02\trckernelport.crf --depend osfr02\trckernelport.d)
+F (..\Middlewares\Third_Party\Tracelyzer\trcKernelPort.c)(0x58F9AF6E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\trckernelport.o --omf_browse osfr02\trckernelport.crf --depend osfr02\trckernelport.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
+I (../Inc/main.h)(0x594AAD9C)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1356,8 +1427,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
@@ -1367,15 +1441,15 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x59343C13
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x59343C13)
-F (..\Middlewares\Third_Party\Tracelyzer\trcStreamingRecorder.c)(0x58F9AF6E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\trcstreamingrecorder.o --omf_browse osfr02\trcstreamingrecorder.crf --depend osfr02\trcstreamingrecorder.d)
+F (..\Middlewares\Third_Party\Tracelyzer\trcStreamingRecorder.c)(0x58F9AF6E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\trcstreamingrecorder.o --omf_browse osfr02\trcstreamingrecorder.crf --depend osfr02\trcstreamingrecorder.d)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h)(0x58FF2DB8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (../Inc/trcConfig.h)(0x594907DB)
+I (../Inc/trcConfig.h)(0x594AA0E8)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h)(0x58F9AF6E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x59343C10)
-I (../Inc/stm32f1xx_hal_conf.h)(0x59497A64)
-I (../Inc/main.h)(0x59497A64)
+I (../Inc/stm32f1xx_hal_conf.h)(0x594AAD9C)
+I (../Inc/main.h)(0x594AAD9C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x59343C10)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x59343C0D)
@@ -1401,14 +1475,26 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x59343C10)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x59343C10)
-I (../Inc/trcSnapshotConfig.h)(0x594973C7)
+I (../Inc/trcStreamingConfig.h)(0x58F9AF6E)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h)(0x58F9AF6E)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
 I (..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h)(0x593012D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x59343C13)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (../Inc/FreeRTOSConfig.h)(0x59497A58)
+I (../Inc/FreeRTOSConfig.h)(0x594AAD9B)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x59343C13)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x59343C13)
+F (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\SEGGER_RTT.c)(0x58A42198)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\segger_rtt.o --omf_browse osfr02\segger_rtt.crf --depend osfr02\segger_rtt.d)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\SEGGER_RTT_Printf.c)(0x58A42198)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\Middlewares\Third_Party\Tracelyzer\include -I ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include --C99-I.\RTE\_OSFR02-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o osfr02\segger_rtt_printf.o --omf_browse osfr02\segger_rtt_printf.crf --depend osfr02\segger_rtt_printf.d)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h)(0x58A42198)
+I (..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h)(0x58A42198)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)

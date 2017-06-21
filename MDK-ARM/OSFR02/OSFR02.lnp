@@ -8,6 +8,7 @@
 "osfr02\stm32f1xx_hal_msp.o"
 "osfr02\adc.o"
 "osfr02\dma.o"
+"osfr02\solder.o"
 "osfr02\system_stm32f1xx.o"
 "osfr02\startup_stm32f103xe.o"
 "osfr02\cmsis_os.o"
@@ -37,6 +38,8 @@
 "osfr02\trcsnapshotrecorder.o"
 "osfr02\trckernelport.o"
 "osfr02\trcstreamingrecorder.o"
+"osfr02\segger_rtt.o"
+"osfr02\segger_rtt_printf.o"
 --library_type=microlib --strict --scatter "OSFR02\OSFR02.sct"
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

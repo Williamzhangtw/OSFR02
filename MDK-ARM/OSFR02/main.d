@@ -38,8 +38,11 @@ osfr02\main.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcRecorder.h
 osfr02\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 osfr02\main.o: ../Inc/trcConfig.h
 osfr02\main.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcPortDefines.h
-osfr02\main.o: ../Inc/trcSnapshotConfig.h
+osfr02\main.o: ../Inc/trcStreamingConfig.h
 osfr02\main.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcHardwarePort.h
+osfr02\main.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\trcStreamingPort.h
+osfr02\main.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT_Conf.h
+osfr02\main.o: ..\Middlewares\Third_Party\Tracelyzer\streamports\Jlink_RTT\include\SEGGER_RTT.h
 osfr02\main.o: ..\Middlewares\Third_Party\Tracelyzer\include\trcKernelPort.h
 osfr02\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 osfr02\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

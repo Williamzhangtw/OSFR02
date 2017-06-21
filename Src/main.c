@@ -110,8 +110,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   printf("Hello world!\n");
   /* Init only, trace starts later...*/
-  vTraceEnable(TRC_INIT);
-  vTraceEnable(TRC_START);
+ // vTraceEnable(TRC_INIT);
+  vTraceEnable(TRC_START_AWAIT_HOST);
 
   /* In a task or ISR */
  // vTraceEnable(TRC_START);
