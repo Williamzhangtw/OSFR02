@@ -75,7 +75,7 @@ void MX_FREERTOS_Init(void);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-
+  char character[10];
 /* USER CODE END 0 */
 
 int main(void)
@@ -108,6 +108,9 @@ int main(void)
   MX_ADC1_Init();
 
   /* USER CODE BEGIN 2 */
+  setvbuf(stdin, NULL, _IONBF, 0);
+  char c =getchar();
+  printf("I get:%c",c );
   printf("Hello world!\n");
   /* Init only, trace starts later...*/
  // vTraceEnable(TRC_INIT);

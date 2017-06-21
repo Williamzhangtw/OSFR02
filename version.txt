@@ -17,3 +17,7 @@ project of freertos on stm32f103 on cubemx
 07 : add stream trace for RTOS(I failed to change the printf by using uart IT mode.)
 
 08 : add the function of get the data from PC by uart.
+
+09 : redirection of putchar
+
+10 :recognize the data is alpha or number and,if number, printf number

@@ -204,12 +204,13 @@ __weak void vLed1Task(void const * argument)
   for(;;)
   {
     int state;
+
     HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
-    state = HAL_UART_Receive(&huart2, (uint8_t *)cGetChar, 2, 0x10);//0XFFFFFFFF is waitting forever
+    state = HAL_UART_Receive(&huart2, (uint8_t *)cGetChar, 2, 0x50);//0XFFFFFFFF is waitting forever
     if( state!= HAL_OK)
     {
-      //       traceString UART_Error = xTraceRegisterString("UART_STATE");
-//       vTracePrintF(UART_Error,"ERROR %d",state);
+      //traceString UART_Error = xTraceRegisterString("UART_STATE");
+      //vTracePrintF(UART_Error,"ERROR %d",state);
       traceString UART_STATE = xTraceRegisterString("UART_STATE");
       vTracePrintF(UART_STATE,"STATE:%d",state);
      // int ch;
@@ -221,7 +222,9 @@ __weak void vLed1Task(void const * argument)
     }
     else
     {
-      printf ("Got %c\n", cGetChar[0]);
+      if ( 48< cGetChar[0]&&  cGetChar[0]<57 )
+      
+      printf ("Got number %d\n", cGetChar[0]);
       traceString U_sended = xTraceRegisterString("UART_STATE");
       vTracePrint(U_sended,"GOT");
     }
