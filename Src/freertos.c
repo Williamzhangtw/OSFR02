@@ -251,10 +251,13 @@ void vPrintfTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-   for(uint8_t i=0;i<5;i++)
-    {
-      printf("adc%d :%d \n",i,uiADC[i]);
-    }
+    //temperature uiADC[2]
+    
+    //VOL  uiADC[3]
+//    printf("Temperature now: %d \n",COMPUTATION_TEMPERATURE_STD_PARAMS(uiADC[2]));
+//    printf("voltage now: %d \n",COMPUTATION_DIGITAL_12BITS_TO_VOLTAGE(uiADC[3]));
+    printf("Temperature now: %d \n",(uiADC[0]));
+    printf("voltage now: %d \n",(uiADC[3]));
     osDelay(500);
   }
   /* USER CODE END vPrintfTask */

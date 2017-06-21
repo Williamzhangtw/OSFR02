@@ -11,3 +11,5 @@ project of freertos on stm32f103 on cubemx
 04 : add two adc
 
 05 : add temperature sensor of mcu,and voltage sensor
+
+06 : add famular to temperture sensor and vol sensor
