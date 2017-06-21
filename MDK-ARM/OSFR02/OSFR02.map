@@ -9,14 +9,21 @@ Section Cross References
     freertos.o(i.MX_FREERTOS_Init) refers to freertos.o(.constdata) for .constdata
     freertos.o(i.MX_FREERTOS_Init) refers to freertos.o(.data) for .data
     freertos.o(i.vLed1Task) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_TogglePin) for HAL_GPIO_TogglePin
+    freertos.o(i.vLed1Task) refers to stm32f1xx_hal_uart.o(i.HAL_UART_Receive) for HAL_UART_Receive
+    freertos.o(i.vLed1Task) refers to trcstreamingrecorder.o(i.xTraceRegisterString) for xTraceRegisterString
+    freertos.o(i.vLed1Task) refers to trcstreamingrecorder.o(i.vTracePrintF) for vTracePrintF
+    freertos.o(i.vLed1Task) refers to printf3.o(i.__0printf$3) for __2printf
+    freertos.o(i.vLed1Task) refers to trcstreamingrecorder.o(i.vTracePrint) for vTracePrint
     freertos.o(i.vLed1Task) refers to cmsis_os.o(i.osDelay) for osDelay
+    freertos.o(i.vLed1Task) refers to freertos.o(.bss) for .bss
+    freertos.o(i.vLed1Task) refers to usart.o(.bss) for huart2
     freertos.o(i.vLed2Task) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_TogglePin) for HAL_GPIO_TogglePin
     freertos.o(i.vLed2Task) refers to cmsis_os.o(i.osDelay) for osDelay
     freertos.o(i.vLed3Task) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_TogglePin) for HAL_GPIO_TogglePin
     freertos.o(i.vLed3Task) refers to cmsis_os.o(i.osDelay) for osDelay
     freertos.o(i.vLed4Task) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_TogglePin) for HAL_GPIO_TogglePin
     freertos.o(i.vLed4Task) refers to cmsis_os.o(i.osDelay) for osDelay
-    freertos.o(i.vPrintfTask) refers to printf1.o(i.__0printf$1) for __2printf
+    freertos.o(i.vPrintfTask) refers to printf3.o(i.__0printf$3) for __2printf
     freertos.o(i.vPrintfTask) refers to cmsis_os.o(i.osDelay) for osDelay
     freertos.o(i.vPrintfTask) refers to solder.o(.data) for realTemp
     freertos.o(i.vSensor1Task) refers to stm32f1xx_hal_adc.o(i.HAL_ADC_Start_DMA) for HAL_ADC_Start_DMA
@@ -71,7 +78,7 @@ Section Cross References
     main.o(i.main) refers to dma.o(i.MX_DMA_Init) for MX_DMA_Init
     main.o(i.main) refers to usart.o(i.MX_USART2_UART_Init) for MX_USART2_UART_Init
     main.o(i.main) refers to adc.o(i.MX_ADC1_Init) for MX_ADC1_Init
-    main.o(i.main) refers to printf1.o(i.__0printf$1) for __2printf
+    main.o(i.main) refers to printf3.o(i.__0printf$3) for __2printf
     main.o(i.main) refers to trckernelport.o(i.vTraceEnable) for vTraceEnable
     main.o(i.main) refers to freertos.o(i.MX_FREERTOS_Init) for MX_FREERTOS_Init
     main.o(i.main) refers to cmsis_os.o(i.osKernelStart) for osKernelStart
@@ -1574,7 +1581,6 @@ Removing Unused input sections from the image.
     Removing stm32f1xx_hal_uart.o(i.HAL_UART_IRQHandler), (218 bytes).
     Removing stm32f1xx_hal_uart.o(i.HAL_UART_MspDeInit), (2 bytes).
     Removing stm32f1xx_hal_uart.o(i.HAL_UART_MspInit), (2 bytes).
-    Removing stm32f1xx_hal_uart.o(i.HAL_UART_Receive), (204 bytes).
     Removing stm32f1xx_hal_uart.o(i.HAL_UART_Receive_DMA), (136 bytes).
     Removing stm32f1xx_hal_uart.o(i.HAL_UART_Receive_IT), (106 bytes).
     Removing stm32f1xx_hal_uart.o(i.HAL_UART_RxCpltCallback), (2 bytes).
@@ -1899,11 +1905,9 @@ Removing Unused input sections from the image.
     Removing trcstreamingrecorder.o(i.prvPagedEventBufferTransfer), (220 bytes).
     Removing trcstreamingrecorder.o(i.prvTraceDeleteObjectData), (112 bytes).
     Removing trcstreamingrecorder.o(i.prvTraceDeleteSymbol), (112 bytes).
-    Removing trcstreamingrecorder.o(i.prvTraceStoreSimpleStringEventHelper), (188 bytes).
     Removing trcstreamingrecorder.o(i.vTraceClearError), (20 bytes).
     Removing trcstreamingrecorder.o(i.vTraceInstanceFinishedNext), (6 bytes).
     Removing trcstreamingrecorder.o(i.vTraceInstanceFinishedNow), (6 bytes).
-    Removing trcstreamingrecorder.o(i.vTracePrint), (4 bytes).
     Removing trcstreamingrecorder.o(i.vTraceSetFrequency), (12 bytes).
     Removing trcstreamingrecorder.o(i.vTraceStop), (6 bytes).
     Removing trcstreamingrecorder.o(i.vTraceStoreISRBegin), (80 bytes).
@@ -1939,7 +1943,7 @@ Removing Unused input sections from the image.
     Removing dfixul.o(.text), (48 bytes).
     Removing cdrcmple.o(.text), (48 bytes).
 
-572 unused section(s) (total 36157 bytes) removed from the image.
+569 unused section(s) (total 35761 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1983,39 +1987,39 @@ Image Symbol Table
     ../Src/stm32f1xx_it.c                    0x00000000   Number         0  stm32f1xx_it.o ABSOLUTE
     ../Src/system_stm32f1xx.c                0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
     ../Src/usart.c                           0x00000000   Number         0  usart.o ABSOLUTE
-    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
-    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ../clib/microlib/string/strcpy.c         0x00000000   Number         0  strcpy.o ABSOLUTE
     ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
@@ -2023,8 +2027,8 @@ Image Symbol Table
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
-    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
     ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c 0x00000000   Number         0  stm32f1xx_hal.o ABSOLUTE
@@ -2161,134 +2165,138 @@ Image Symbol Table
     i.HAL_TIM_TriggerCallback                0x0800238c   Section        0  stm32f1xx_hal_tim.o(i.HAL_TIM_TriggerCallback)
     i.HAL_UART_Init                          0x0800238e   Section        0  stm32f1xx_hal_uart.o(i.HAL_UART_Init)
     i.HAL_UART_MspInit                       0x080023ec   Section        0  usart.o(i.HAL_UART_MspInit)
-    i.HAL_UART_Transmit                      0x08002444   Section        0  stm32f1xx_hal_uart.o(i.HAL_UART_Transmit)
-    i.HardFault_Handler                      0x08002510   Section        0  stm32f1xx_it.o(i.HardFault_Handler)
-    i.MX_ADC1_Init                           0x08002514   Section        0  adc.o(i.MX_ADC1_Init)
-    i.MX_DMA_Init                            0x080025c4   Section        0  dma.o(i.MX_DMA_Init)
-    i.MX_FREERTOS_Init                       0x080025f0   Section        0  freertos.o(i.MX_FREERTOS_Init)
-    i.MX_GPIO_Init                           0x08002684   Section        0  gpio.o(i.MX_GPIO_Init)
-    i.MX_USART2_UART_Init                    0x08002708   Section        0  usart.o(i.MX_USART2_UART_Init)
-    i.MemManage_Handler                      0x08002754   Section        0  stm32f1xx_it.o(i.MemManage_Handler)
-    i.NMI_Handler                            0x08002756   Section        0  stm32f1xx_it.o(i.NMI_Handler)
-    i.NVIC_SetPriority                       0x08002758   Section        0  stm32f1xx_hal_cortex.o(i.NVIC_SetPriority)
-    NVIC_SetPriority                         0x08002759   Thumb Code    32  stm32f1xx_hal_cortex.o(i.NVIC_SetPriority)
-    i.SEGGER_RTT_ConfigDownBuffer            0x08002778   Section        0  segger_rtt.o(i.SEGGER_RTT_ConfigDownBuffer)
-    i.SEGGER_RTT_ConfigUpBuffer              0x080027d8   Section        0  segger_rtt.o(i.SEGGER_RTT_ConfigUpBuffer)
-    i.SEGGER_RTT_Read                        0x08002838   Section        0  segger_rtt.o(i.SEGGER_RTT_Read)
-    i.SEGGER_RTT_ReadNoLock                  0x08002850   Section        0  segger_rtt.o(i.SEGGER_RTT_ReadNoLock)
-    i.SEGGER_RTT_Write                       0x080028c8   Section        0  segger_rtt.o(i.SEGGER_RTT_Write)
-    i.SEGGER_RTT_WriteNoLock                 0x08002900   Section        0  segger_rtt.o(i.SEGGER_RTT_WriteNoLock)
-    i.SysTick_Handler                        0x0800295c   Section        0  stm32f1xx_it.o(i.SysTick_Handler)
-    i.SystemClock_Config                     0x08002960   Section        0  main.o(i.SystemClock_Config)
-    i.SystemInit                             0x080029d8   Section        0  system_stm32f1xx.o(i.SystemInit)
-    i.TIM6_IRQHandler                        0x08002a20   Section        0  stm32f1xx_it.o(i.TIM6_IRQHandler)
-    i.TIM_Base_SetConfig                     0x08002a2c   Section        0  stm32f1xx_hal_tim.o(i.TIM_Base_SetConfig)
-    i.TzCtrl                                 0x08002ab0   Section        0  trckernelport.o(i.TzCtrl)
-    TzCtrl                                   0x08002ab1   Thumb Code    56  trckernelport.o(i.TzCtrl)
-    i.UART_SetConfig                         0x08002aec   Section        0  stm32f1xx_hal_uart.o(i.UART_SetConfig)
-    UART_SetConfig                           0x08002aed   Thumb Code   364  stm32f1xx_hal_uart.o(i.UART_SetConfig)
-    i.UART_WaitOnFlagUntilTimeout            0x08002c5c   Section        0  stm32f1xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    UART_WaitOnFlagUntilTimeout              0x08002c5d   Thumb Code   146  stm32f1xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    i.UsageFault_Handler                     0x08002cee   Section        0  stm32f1xx_it.o(i.UsageFault_Handler)
-    i._DoInit                                0x08002cf0   Section        0  segger_rtt.o(i._DoInit)
-    _DoInit                                  0x08002cf1   Thumb Code    74  segger_rtt.o(i._DoInit)
-    i._Error_Handler                         0x08002d58   Section        0  main.o(i._Error_Handler)
-    i._GetAvailWriteSpace                    0x08002d5a   Section        0  segger_rtt.o(i._GetAvailWriteSpace)
-    _GetAvailWriteSpace                      0x08002d5b   Thumb Code    22  segger_rtt.o(i._GetAvailWriteSpace)
-    i._WriteBlocking                         0x08002d70   Section        0  segger_rtt.o(i._WriteBlocking)
-    _WriteBlocking                           0x08002d71   Thumb Code    90  segger_rtt.o(i._WriteBlocking)
-    i._WriteNoCheck                          0x08002dca   Section        0  segger_rtt.o(i._WriteNoCheck)
-    _WriteNoCheck                            0x08002dcb   Thumb Code    66  segger_rtt.o(i._WriteNoCheck)
-    i.__0printf$1                            0x08002e0c   Section        0  printf1.o(i.__0printf$1)
-    i.__scatterload_copy                     0x08002e2c   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08002e3a   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08002e3c   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._printf_core                           0x08002e4c   Section        0  printf1.o(i._printf_core)
-    _printf_core                             0x08002e4d   Thumb Code   336  printf1.o(i._printf_core)
-    i.fputc                                  0x08002fa0   Section        0  usart.o(i.fputc)
-    i.main                                   0x08002fb8   Section        0  main.o(i.main)
-    i.makeFreeRtosPriority                   0x08002ff8   Section        0  cmsis_os.o(i.makeFreeRtosPriority)
-    makeFreeRtosPriority                     0x08002ff9   Thumb Code    12  cmsis_os.o(i.makeFreeRtosPriority)
-    i.osDelay                                0x08003004   Section        0  cmsis_os.o(i.osDelay)
-    i.osKernelStart                          0x08003012   Section        0  cmsis_os.o(i.osKernelStart)
-    i.osSystickHandler                       0x0800301c   Section        0  cmsis_os.o(i.osSystickHandler)
-    i.osThreadCreate                         0x08003030   Section        0  cmsis_os.o(i.osThreadCreate)
-    i.prvAddCurrentTaskToDelayedList         0x08003068   Section        0  tasks.o(i.prvAddCurrentTaskToDelayedList)
-    prvAddCurrentTaskToDelayedList           0x08003069   Thumb Code    48  tasks.o(i.prvAddCurrentTaskToDelayedList)
-    i.prvCheckRecorderStatus                 0x0800309c   Section        0  trckernelport.o(i.prvCheckRecorderStatus)
-    prvCheckRecorderStatus                   0x0800309d   Thumb Code   108  trckernelport.o(i.prvCheckRecorderStatus)
-    i.prvCheckTasksWaitingTermination        0x080031ec   Section        0  tasks.o(i.prvCheckTasksWaitingTermination)
-    prvCheckTasksWaitingTermination          0x080031ed   Thumb Code    76  tasks.o(i.prvCheckTasksWaitingTermination)
-    i.prvHeapInit                            0x08003240   Section        0  heap_4.o(i.prvHeapInit)
-    prvHeapInit                              0x08003241   Thumb Code    66  heap_4.o(i.prvHeapInit)
-    i.prvIdleTask                            0x0800328c   Section        0  tasks.o(i.prvIdleTask)
-    prvIdleTask                              0x0800328d   Thumb Code    20  tasks.o(i.prvIdleTask)
-    i.prvInsertBlockIntoFreeList             0x080032a4   Section        0  heap_4.o(i.prvInsertBlockIntoFreeList)
-    prvInsertBlockIntoFreeList               0x080032a5   Thumb Code    72  heap_4.o(i.prvInsertBlockIntoFreeList)
-    i.prvIsNewTCB                            0x080032f0   Section        0  trckernelport.o(i.prvIsNewTCB)
-    i.prvIsValidCommand                      0x08003308   Section        0  trcstreamingrecorder.o(i.prvIsValidCommand)
-    i.prvProcessCommand                      0x08003342   Section        0  trcstreamingrecorder.o(i.prvProcessCommand)
-    i.prvResetNextTaskUnblockTime            0x08003350   Section        0  tasks.o(i.prvResetNextTaskUnblockTime)
-    prvResetNextTaskUnblockTime              0x08003351   Thumb Code    26  tasks.o(i.prvResetNextTaskUnblockTime)
-    i.prvSetRecorderEnabled                  0x08003370   Section        0  trcstreamingrecorder.o(i.prvSetRecorderEnabled)
-    prvSetRecorderEnabled                    0x08003371   Thumb Code   324  trcstreamingrecorder.o(i.prvSetRecorderEnabled)
-    i.prvTaskExitError                       0x080034c4   Section        0  port.o(i.prvTaskExitError)
-    prvTaskExitError                         0x080034c5   Thumb Code    20  port.o(i.prvTaskExitError)
-    i.prvTraceError                          0x080034dc   Section        0  trcstreamingrecorder.o(i.prvTraceError)
-    i.prvTraceGetCurrentTaskHandle           0x08003530   Section        0  trckernelport.o(i.prvTraceGetCurrentTaskHandle)
-    i.prvTraceInitCortexM                    0x08003534   Section        0  trcstreamingrecorder.o(i.prvTraceInitCortexM)
-    i.prvTraceOnBegin                        0x0800357c   Section        0  trckernelport.o(i.prvTraceOnBegin)
-    i.prvTraceOnEnd                          0x0800357e   Section        0  trckernelport.o(i.prvTraceOnEnd)
-    i.prvTraceSaveObjectData                 0x08003580   Section        0  trcstreamingrecorder.o(i.prvTraceSaveObjectData)
-    i.prvTraceSaveSymbol                     0x080035dc   Section        0  trcstreamingrecorder.o(i.prvTraceSaveSymbol)
-    i.prvTraceStoreEvent                     0x0800365c   Section        0  trcstreamingrecorder.o(i.prvTraceStoreEvent)
-    i.prvTraceStoreEvent0                    0x080036d4   Section        0  trcstreamingrecorder.o(i.prvTraceStoreEvent0)
-    i.prvTraceStoreEvent1                    0x08003724   Section        0  trcstreamingrecorder.o(i.prvTraceStoreEvent1)
-    i.prvTraceStoreEvent2                    0x08003778   Section        0  trcstreamingrecorder.o(i.prvTraceStoreEvent2)
-    i.prvTraceStoreEvent3                    0x080037d0   Section        0  trcstreamingrecorder.o(i.prvTraceStoreEvent3)
-    i.prvTraceStoreStringEvent               0x0800382c   Section        0  trcstreamingrecorder.o(i.prvTraceStoreStringEvent)
-    i.prvTraceStoreStringEventHelper         0x08003848   Section        0  trcstreamingrecorder.o(i.prvTraceStoreStringEventHelper)
-    prvTraceStoreStringEventHelper           0x08003849   Thumb Code   226  trcstreamingrecorder.o(i.prvTraceStoreStringEventHelper)
-    i.prvTraceStoreWarnings                  0x08003934   Section        0  trcstreamingrecorder.o(i.prvTraceStoreWarnings)
-    prvTraceStoreWarnings                    0x08003935   Thumb Code   122  trcstreamingrecorder.o(i.prvTraceStoreWarnings)
-    i.pvPortMalloc                           0x08003aec   Section        0  heap_4.o(i.pvPortMalloc)
-    i.pxPortInitialiseStack                  0x08003bb0   Section        0  port.o(i.pxPortInitialiseStack)
-    i.uGetTemperature                        0x08003bd0   Section        0  solder.o(i.uGetTemperature)
-    i.uxListRemove                           0x08003c04   Section        0  list.o(i.uxListRemove)
-    i.vLed1Task                              0x08003c28   Section        0  freertos.o(i.vLed1Task)
-    i.vLed2Task                              0x08003c40   Section        0  freertos.o(i.vLed2Task)
-    i.vLed3Task                              0x08003c58   Section        0  freertos.o(i.vLed3Task)
-    i.vLed4Task                              0x08003c74   Section        0  freertos.o(i.vLed4Task)
-    i.vListInitialise                        0x08003c90   Section        0  list.o(i.vListInitialise)
-    i.vListInitialiseItem                    0x08003ca6   Section        0  list.o(i.vListInitialiseItem)
-    i.vListInsert                            0x08003cac   Section        0  list.o(i.vListInsert)
-    i.vListInsertEnd                         0x08003cdc   Section        0  list.o(i.vListInsertEnd)
-    i.vPortEnterCritical                     0x08003cf4   Section        0  port.o(i.vPortEnterCritical)
-    i.vPortExitCritical                      0x08003d2c   Section        0  port.o(i.vPortExitCritical)
-    i.vPortFree                              0x08003d50   Section        0  heap_4.o(i.vPortFree)
-    i.vPortSetupTimerInterrupt               0x08003da4   Section        0  port.o(i.vPortSetupTimerInterrupt)
-    i.vPortYield                             0x08003dc4   Section        0  port.o(i.vPortYield)
-    i.vPrintfTask                            0x08003ddc   Section        0  freertos.o(i.vPrintfTask)
-    i.vSensor1Task                           0x08003e08   Section        0  freertos.o(i.vSensor1Task)
-    i.vTaskDelay                             0x08003e58   Section        0  tasks.o(i.vTaskDelay)
-    i.vTaskStartScheduler                    0x08003eb0   Section        0  tasks.o(i.vTaskStartScheduler)
-    i.vTaskSuspendAll                        0x08003f04   Section        0  tasks.o(i.vTaskSuspendAll)
-    i.vTaskSwitchContext                     0x08003f14   Section        0  tasks.o(i.vTaskSwitchContext)
-    i.vTempCtrl                              0x08003f80   Section        0  solder.o(i.vTempCtrl)
-    i.vTraceEnable                           0x08003fac   Section        0  trckernelport.o(i.vTraceEnable)
-    i.vTracePrintF                           0x080040ac   Section        0  trcstreamingrecorder.o(i.vTracePrintF)
-    i.xPortStartScheduler                    0x080040f4   Section        0  port.o(i.xPortStartScheduler)
-    i.xPortSysTickHandler                    0x08004168   Section        0  port.o(i.xPortSysTickHandler)
-    i.xTaskGenericCreate                     0x0800418c   Section        0  tasks.o(i.xTaskGenericCreate)
-    i.xTaskGetCurrentTaskHandle              0x08004350   Section        0  tasks.o(i.xTaskGetCurrentTaskHandle)
-    i.xTaskGetSchedulerState                 0x0800435c   Section        0  tasks.o(i.xTaskGetSchedulerState)
-    i.xTaskIncrementTick                     0x08004378   Section        0  tasks.o(i.xTaskIncrementTick)
-    i.xTaskResumeAll                         0x08004464   Section        0  tasks.o(i.xTaskResumeAll)
-    i.xTraceRegisterString                   0x08004518   Section        0  trcstreamingrecorder.o(i.xTraceRegisterString)
-    .constdata                               0x08004534   Section      120  freertos.o(.constdata)
-    .constdata                               0x080045ac   Section       16  system_stm32f1xx.o(.constdata)
-    .constdata                               0x080045bc   Section        8  system_stm32f1xx.o(.constdata)
-    .conststring                             0x080045c4   Section       71  freertos.o(.conststring)
+    i.HAL_UART_Receive                       0x08002444   Section        0  stm32f1xx_hal_uart.o(i.HAL_UART_Receive)
+    i.HAL_UART_Transmit                      0x08002510   Section        0  stm32f1xx_hal_uart.o(i.HAL_UART_Transmit)
+    i.HardFault_Handler                      0x080025dc   Section        0  stm32f1xx_it.o(i.HardFault_Handler)
+    i.MX_ADC1_Init                           0x080025e0   Section        0  adc.o(i.MX_ADC1_Init)
+    i.MX_DMA_Init                            0x08002690   Section        0  dma.o(i.MX_DMA_Init)
+    i.MX_FREERTOS_Init                       0x080026bc   Section        0  freertos.o(i.MX_FREERTOS_Init)
+    i.MX_GPIO_Init                           0x08002750   Section        0  gpio.o(i.MX_GPIO_Init)
+    i.MX_USART2_UART_Init                    0x080027d4   Section        0  usart.o(i.MX_USART2_UART_Init)
+    i.MemManage_Handler                      0x08002820   Section        0  stm32f1xx_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x08002822   Section        0  stm32f1xx_it.o(i.NMI_Handler)
+    i.NVIC_SetPriority                       0x08002824   Section        0  stm32f1xx_hal_cortex.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x08002825   Thumb Code    32  stm32f1xx_hal_cortex.o(i.NVIC_SetPriority)
+    i.SEGGER_RTT_ConfigDownBuffer            0x08002844   Section        0  segger_rtt.o(i.SEGGER_RTT_ConfigDownBuffer)
+    i.SEGGER_RTT_ConfigUpBuffer              0x080028a4   Section        0  segger_rtt.o(i.SEGGER_RTT_ConfigUpBuffer)
+    i.SEGGER_RTT_Read                        0x08002904   Section        0  segger_rtt.o(i.SEGGER_RTT_Read)
+    i.SEGGER_RTT_ReadNoLock                  0x0800291c   Section        0  segger_rtt.o(i.SEGGER_RTT_ReadNoLock)
+    i.SEGGER_RTT_Write                       0x08002994   Section        0  segger_rtt.o(i.SEGGER_RTT_Write)
+    i.SEGGER_RTT_WriteNoLock                 0x080029cc   Section        0  segger_rtt.o(i.SEGGER_RTT_WriteNoLock)
+    i.SysTick_Handler                        0x08002a28   Section        0  stm32f1xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x08002a2c   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x08002aa4   Section        0  system_stm32f1xx.o(i.SystemInit)
+    i.TIM6_IRQHandler                        0x08002aec   Section        0  stm32f1xx_it.o(i.TIM6_IRQHandler)
+    i.TIM_Base_SetConfig                     0x08002af8   Section        0  stm32f1xx_hal_tim.o(i.TIM_Base_SetConfig)
+    i.TzCtrl                                 0x08002b7c   Section        0  trckernelport.o(i.TzCtrl)
+    TzCtrl                                   0x08002b7d   Thumb Code    56  trckernelport.o(i.TzCtrl)
+    i.UART_SetConfig                         0x08002bb8   Section        0  stm32f1xx_hal_uart.o(i.UART_SetConfig)
+    UART_SetConfig                           0x08002bb9   Thumb Code   364  stm32f1xx_hal_uart.o(i.UART_SetConfig)
+    i.UART_WaitOnFlagUntilTimeout            0x08002d28   Section        0  stm32f1xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    UART_WaitOnFlagUntilTimeout              0x08002d29   Thumb Code   146  stm32f1xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    i.UsageFault_Handler                     0x08002dba   Section        0  stm32f1xx_it.o(i.UsageFault_Handler)
+    i._DoInit                                0x08002dbc   Section        0  segger_rtt.o(i._DoInit)
+    _DoInit                                  0x08002dbd   Thumb Code    74  segger_rtt.o(i._DoInit)
+    i._Error_Handler                         0x08002e24   Section        0  main.o(i._Error_Handler)
+    i._GetAvailWriteSpace                    0x08002e26   Section        0  segger_rtt.o(i._GetAvailWriteSpace)
+    _GetAvailWriteSpace                      0x08002e27   Thumb Code    22  segger_rtt.o(i._GetAvailWriteSpace)
+    i._WriteBlocking                         0x08002e3c   Section        0  segger_rtt.o(i._WriteBlocking)
+    _WriteBlocking                           0x08002e3d   Thumb Code    90  segger_rtt.o(i._WriteBlocking)
+    i._WriteNoCheck                          0x08002e96   Section        0  segger_rtt.o(i._WriteNoCheck)
+    _WriteNoCheck                            0x08002e97   Thumb Code    66  segger_rtt.o(i._WriteNoCheck)
+    i.__0printf$3                            0x08002ed8   Section        0  printf3.o(i.__0printf$3)
+    i.__scatterload_copy                     0x08002ef8   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08002f06   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08002f08   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._printf_core                           0x08002f18   Section        0  printf3.o(i._printf_core)
+    _printf_core                             0x08002f19   Thumb Code   436  printf3.o(i._printf_core)
+    i.fputc                                  0x080030d0   Section        0  usart.o(i.fputc)
+    i.main                                   0x080030e8   Section        0  main.o(i.main)
+    i.makeFreeRtosPriority                   0x08003128   Section        0  cmsis_os.o(i.makeFreeRtosPriority)
+    makeFreeRtosPriority                     0x08003129   Thumb Code    12  cmsis_os.o(i.makeFreeRtosPriority)
+    i.osDelay                                0x08003134   Section        0  cmsis_os.o(i.osDelay)
+    i.osKernelStart                          0x08003142   Section        0  cmsis_os.o(i.osKernelStart)
+    i.osSystickHandler                       0x0800314c   Section        0  cmsis_os.o(i.osSystickHandler)
+    i.osThreadCreate                         0x08003160   Section        0  cmsis_os.o(i.osThreadCreate)
+    i.prvAddCurrentTaskToDelayedList         0x08003198   Section        0  tasks.o(i.prvAddCurrentTaskToDelayedList)
+    prvAddCurrentTaskToDelayedList           0x08003199   Thumb Code    48  tasks.o(i.prvAddCurrentTaskToDelayedList)
+    i.prvCheckRecorderStatus                 0x080031cc   Section        0  trckernelport.o(i.prvCheckRecorderStatus)
+    prvCheckRecorderStatus                   0x080031cd   Thumb Code   108  trckernelport.o(i.prvCheckRecorderStatus)
+    i.prvCheckTasksWaitingTermination        0x0800331c   Section        0  tasks.o(i.prvCheckTasksWaitingTermination)
+    prvCheckTasksWaitingTermination          0x0800331d   Thumb Code    76  tasks.o(i.prvCheckTasksWaitingTermination)
+    i.prvHeapInit                            0x08003370   Section        0  heap_4.o(i.prvHeapInit)
+    prvHeapInit                              0x08003371   Thumb Code    66  heap_4.o(i.prvHeapInit)
+    i.prvIdleTask                            0x080033bc   Section        0  tasks.o(i.prvIdleTask)
+    prvIdleTask                              0x080033bd   Thumb Code    20  tasks.o(i.prvIdleTask)
+    i.prvInsertBlockIntoFreeList             0x080033d4   Section        0  heap_4.o(i.prvInsertBlockIntoFreeList)
+    prvInsertBlockIntoFreeList               0x080033d5   Thumb Code    72  heap_4.o(i.prvInsertBlockIntoFreeList)
+    i.prvIsNewTCB                            0x08003420   Section        0  trckernelport.o(i.prvIsNewTCB)
+    i.prvIsValidCommand                      0x08003438   Section        0  trcstreamingrecorder.o(i.prvIsValidCommand)
+    i.prvProcessCommand                      0x08003472   Section        0  trcstreamingrecorder.o(i.prvProcessCommand)
+    i.prvResetNextTaskUnblockTime            0x08003480   Section        0  tasks.o(i.prvResetNextTaskUnblockTime)
+    prvResetNextTaskUnblockTime              0x08003481   Thumb Code    26  tasks.o(i.prvResetNextTaskUnblockTime)
+    i.prvSetRecorderEnabled                  0x080034a0   Section        0  trcstreamingrecorder.o(i.prvSetRecorderEnabled)
+    prvSetRecorderEnabled                    0x080034a1   Thumb Code   324  trcstreamingrecorder.o(i.prvSetRecorderEnabled)
+    i.prvTaskExitError                       0x080035f4   Section        0  port.o(i.prvTaskExitError)
+    prvTaskExitError                         0x080035f5   Thumb Code    20  port.o(i.prvTaskExitError)
+    i.prvTraceError                          0x0800360c   Section        0  trcstreamingrecorder.o(i.prvTraceError)
+    i.prvTraceGetCurrentTaskHandle           0x08003660   Section        0  trckernelport.o(i.prvTraceGetCurrentTaskHandle)
+    i.prvTraceInitCortexM                    0x08003664   Section        0  trcstreamingrecorder.o(i.prvTraceInitCortexM)
+    i.prvTraceOnBegin                        0x080036ac   Section        0  trckernelport.o(i.prvTraceOnBegin)
+    i.prvTraceOnEnd                          0x080036ae   Section        0  trckernelport.o(i.prvTraceOnEnd)
+    i.prvTraceSaveObjectData                 0x080036b0   Section        0  trcstreamingrecorder.o(i.prvTraceSaveObjectData)
+    i.prvTraceSaveSymbol                     0x0800370c   Section        0  trcstreamingrecorder.o(i.prvTraceSaveSymbol)
+    i.prvTraceStoreEvent                     0x0800378c   Section        0  trcstreamingrecorder.o(i.prvTraceStoreEvent)
+    i.prvTraceStoreEvent0                    0x08003804   Section        0  trcstreamingrecorder.o(i.prvTraceStoreEvent0)
+    i.prvTraceStoreEvent1                    0x08003854   Section        0  trcstreamingrecorder.o(i.prvTraceStoreEvent1)
+    i.prvTraceStoreEvent2                    0x080038a8   Section        0  trcstreamingrecorder.o(i.prvTraceStoreEvent2)
+    i.prvTraceStoreEvent3                    0x08003900   Section        0  trcstreamingrecorder.o(i.prvTraceStoreEvent3)
+    i.prvTraceStoreSimpleStringEventHelper   0x0800395c   Section        0  trcstreamingrecorder.o(i.prvTraceStoreSimpleStringEventHelper)
+    prvTraceStoreSimpleStringEventHelper     0x0800395d   Thumb Code   178  trcstreamingrecorder.o(i.prvTraceStoreSimpleStringEventHelper)
+    i.prvTraceStoreStringEvent               0x08003a18   Section        0  trcstreamingrecorder.o(i.prvTraceStoreStringEvent)
+    i.prvTraceStoreStringEventHelper         0x08003a34   Section        0  trcstreamingrecorder.o(i.prvTraceStoreStringEventHelper)
+    prvTraceStoreStringEventHelper           0x08003a35   Thumb Code   226  trcstreamingrecorder.o(i.prvTraceStoreStringEventHelper)
+    i.prvTraceStoreWarnings                  0x08003b20   Section        0  trcstreamingrecorder.o(i.prvTraceStoreWarnings)
+    prvTraceStoreWarnings                    0x08003b21   Thumb Code   122  trcstreamingrecorder.o(i.prvTraceStoreWarnings)
+    i.pvPortMalloc                           0x08003cd8   Section        0  heap_4.o(i.pvPortMalloc)
+    i.pxPortInitialiseStack                  0x08003d9c   Section        0  port.o(i.pxPortInitialiseStack)
+    i.uGetTemperature                        0x08003dbc   Section        0  solder.o(i.uGetTemperature)
+    i.uxListRemove                           0x08003df0   Section        0  list.o(i.uxListRemove)
+    i.vLed1Task                              0x08003e14   Section        0  freertos.o(i.vLed1Task)
+    i.vLed2Task                              0x08003e8c   Section        0  freertos.o(i.vLed2Task)
+    i.vLed3Task                              0x08003ea4   Section        0  freertos.o(i.vLed3Task)
+    i.vLed4Task                              0x08003ec0   Section        0  freertos.o(i.vLed4Task)
+    i.vListInitialise                        0x08003edc   Section        0  list.o(i.vListInitialise)
+    i.vListInitialiseItem                    0x08003ef2   Section        0  list.o(i.vListInitialiseItem)
+    i.vListInsert                            0x08003ef8   Section        0  list.o(i.vListInsert)
+    i.vListInsertEnd                         0x08003f28   Section        0  list.o(i.vListInsertEnd)
+    i.vPortEnterCritical                     0x08003f40   Section        0  port.o(i.vPortEnterCritical)
+    i.vPortExitCritical                      0x08003f78   Section        0  port.o(i.vPortExitCritical)
+    i.vPortFree                              0x08003f9c   Section        0  heap_4.o(i.vPortFree)
+    i.vPortSetupTimerInterrupt               0x08003ff0   Section        0  port.o(i.vPortSetupTimerInterrupt)
+    i.vPortYield                             0x08004010   Section        0  port.o(i.vPortYield)
+    i.vPrintfTask                            0x08004028   Section        0  freertos.o(i.vPrintfTask)
+    i.vSensor1Task                           0x08004054   Section        0  freertos.o(i.vSensor1Task)
+    i.vTaskDelay                             0x080040a4   Section        0  tasks.o(i.vTaskDelay)
+    i.vTaskStartScheduler                    0x080040fc   Section        0  tasks.o(i.vTaskStartScheduler)
+    i.vTaskSuspendAll                        0x08004150   Section        0  tasks.o(i.vTaskSuspendAll)
+    i.vTaskSwitchContext                     0x08004160   Section        0  tasks.o(i.vTaskSwitchContext)
+    i.vTempCtrl                              0x080041cc   Section        0  solder.o(i.vTempCtrl)
+    i.vTraceEnable                           0x080041f8   Section        0  trckernelport.o(i.vTraceEnable)
+    i.vTracePrint                            0x080042f8   Section        0  trcstreamingrecorder.o(i.vTracePrint)
+    i.vTracePrintF                           0x080042fc   Section        0  trcstreamingrecorder.o(i.vTracePrintF)
+    i.xPortStartScheduler                    0x08004344   Section        0  port.o(i.xPortStartScheduler)
+    i.xPortSysTickHandler                    0x080043b8   Section        0  port.o(i.xPortSysTickHandler)
+    i.xTaskGenericCreate                     0x080043dc   Section        0  tasks.o(i.xTaskGenericCreate)
+    i.xTaskGetCurrentTaskHandle              0x080045a0   Section        0  tasks.o(i.xTaskGetCurrentTaskHandle)
+    i.xTaskGetSchedulerState                 0x080045ac   Section        0  tasks.o(i.xTaskGetSchedulerState)
+    i.xTaskIncrementTick                     0x080045c8   Section        0  tasks.o(i.xTaskIncrementTick)
+    i.xTaskResumeAll                         0x080046b4   Section        0  tasks.o(i.xTaskResumeAll)
+    i.xTraceRegisterString                   0x08004768   Section        0  trcstreamingrecorder.o(i.xTraceRegisterString)
+    .constdata                               0x08004784   Section      120  freertos.o(.constdata)
+    .constdata                               0x080047fc   Section       16  system_stm32f1xx.o(.constdata)
+    .constdata                               0x0800480c   Section        8  system_stm32f1xx.o(.constdata)
+    .conststring                             0x08004814   Section       71  freertos.o(.conststring)
     .data                                    0x20000000   Section       24  freertos.o(.data)
     .data                                    0x20000018   Section        4  solder.o(.data)
     configureTemp                            0x20000018   Data           2  solder.o(.data)
@@ -2338,29 +2346,29 @@ Image Symbol Table
     eventCounter                             0x200000b8   Data           4  trcstreamingrecorder.o(.data)
     currentWritePage                         0x200000e8   Data           4  trcstreamingrecorder.o(.data)
     .data                                    0x200000ec   Section        4  stdout.o(.data)
-    .bss                                     0x200000f0   Section       20  freertos.o(.bss)
-    .bss                                     0x20000104   Section       60  stm32f1xx_hal_timebase_tim.o(.bss)
-    .bss                                     0x20000140   Section       64  usart.o(.bss)
-    .bss                                     0x20000180   Section      104  adc.o(.bss)
-    .bss                                     0x200001e8   Section    10240  heap_4.o(.bss)
-    ucHeap                                   0x200001e8   Data       10240  heap_4.o(.bss)
-    .bss                                     0x200029e8   Section      240  tasks.o(.bss)
-    pxReadyTasksLists                        0x200029e8   Data         140  tasks.o(.bss)
-    xDelayedTaskList1                        0x20002a74   Data          20  tasks.o(.bss)
-    xDelayedTaskList2                        0x20002a88   Data          20  tasks.o(.bss)
-    xPendingReadyList                        0x20002a9c   Data          20  tasks.o(.bss)
-    xTasksWaitingTermination                 0x20002ab0   Data          20  tasks.o(.bss)
-    xSuspendedTaskList                       0x20002ac4   Data          20  tasks.o(.bss)
-    .bss                                     0x20002ad8   Section     5032  trckernelport.o(.bss)
-    _TzCtrlData                              0x20003e60   Data          32  trckernelport.o(.bss)
-    .bss                                     0x20003e80   Section     1648  trcstreamingrecorder.o(.bss)
-    symbolTable                              0x20003e80   Data        1280  trcstreamingrecorder.o(.bss)
-    objectDataTable                          0x20004380   Data         320  trcstreamingrecorder.o(.bss)
-    ISR_stack                                0x200044c0   Data          32  trcstreamingrecorder.o(.bss)
-    .bss                                     0x200044f0   Section      248  segger_rtt.o(.bss)
-    _acUpBuffer                              0x20004598   Data          64  segger_rtt.o(.bss)
-    _acDownBuffer                            0x200045d8   Data          16  segger_rtt.o(.bss)
-    STACK                                    0x200045e8   Section     1024  startup_stm32f103xe.o(STACK)
+    .bss                                     0x200000f0   Section     1044  freertos.o(.bss)
+    .bss                                     0x20000504   Section       60  stm32f1xx_hal_timebase_tim.o(.bss)
+    .bss                                     0x20000540   Section       64  usart.o(.bss)
+    .bss                                     0x20000580   Section      104  adc.o(.bss)
+    .bss                                     0x200005e8   Section    10240  heap_4.o(.bss)
+    ucHeap                                   0x200005e8   Data       10240  heap_4.o(.bss)
+    .bss                                     0x20002de8   Section      240  tasks.o(.bss)
+    pxReadyTasksLists                        0x20002de8   Data         140  tasks.o(.bss)
+    xDelayedTaskList1                        0x20002e74   Data          20  tasks.o(.bss)
+    xDelayedTaskList2                        0x20002e88   Data          20  tasks.o(.bss)
+    xPendingReadyList                        0x20002e9c   Data          20  tasks.o(.bss)
+    xTasksWaitingTermination                 0x20002eb0   Data          20  tasks.o(.bss)
+    xSuspendedTaskList                       0x20002ec4   Data          20  tasks.o(.bss)
+    .bss                                     0x20002ed8   Section     5032  trckernelport.o(.bss)
+    _TzCtrlData                              0x20004260   Data          32  trckernelport.o(.bss)
+    .bss                                     0x20004280   Section     1648  trcstreamingrecorder.o(.bss)
+    symbolTable                              0x20004280   Data        1280  trcstreamingrecorder.o(.bss)
+    objectDataTable                          0x20004780   Data         320  trcstreamingrecorder.o(.bss)
+    ISR_stack                                0x200048c0   Data          32  trcstreamingrecorder.o(.bss)
+    .bss                                     0x200048f0   Section      248  segger_rtt.o(.bss)
+    _acUpBuffer                              0x20004998   Data          64  segger_rtt.o(.bss)
+    _acDownBuffer                            0x200049d8   Data          16  segger_rtt.o(.bss)
+    STACK                                    0x200049e8   Section     1024  startup_stm32f103xe.o(STACK)
 
     Global Symbols
 
@@ -2577,94 +2585,96 @@ Image Symbol Table
     HAL_TIM_TriggerCallback                  0x0800238d   Thumb Code     2  stm32f1xx_hal_tim.o(i.HAL_TIM_TriggerCallback)
     HAL_UART_Init                            0x0800238f   Thumb Code    94  stm32f1xx_hal_uart.o(i.HAL_UART_Init)
     HAL_UART_MspInit                         0x080023ed   Thumb Code    74  usart.o(i.HAL_UART_MspInit)
-    HAL_UART_Transmit                        0x08002445   Thumb Code   204  stm32f1xx_hal_uart.o(i.HAL_UART_Transmit)
-    HardFault_Handler                        0x08002511   Thumb Code     2  stm32f1xx_it.o(i.HardFault_Handler)
-    MX_ADC1_Init                             0x08002515   Thumb Code   150  adc.o(i.MX_ADC1_Init)
-    MX_DMA_Init                              0x080025c5   Thumb Code    40  dma.o(i.MX_DMA_Init)
-    MX_FREERTOS_Init                         0x080025f1   Thumb Code   140  freertos.o(i.MX_FREERTOS_Init)
-    MX_GPIO_Init                             0x08002685   Thumb Code   120  gpio.o(i.MX_GPIO_Init)
-    MX_USART2_UART_Init                      0x08002709   Thumb Code    52  usart.o(i.MX_USART2_UART_Init)
-    MemManage_Handler                        0x08002755   Thumb Code     2  stm32f1xx_it.o(i.MemManage_Handler)
-    NMI_Handler                              0x08002757   Thumb Code     2  stm32f1xx_it.o(i.NMI_Handler)
-    SEGGER_RTT_ConfigDownBuffer              0x08002779   Thumb Code    90  segger_rtt.o(i.SEGGER_RTT_ConfigDownBuffer)
-    SEGGER_RTT_ConfigUpBuffer                0x080027d9   Thumb Code    90  segger_rtt.o(i.SEGGER_RTT_ConfigUpBuffer)
-    SEGGER_RTT_Read                          0x08002839   Thumb Code    24  segger_rtt.o(i.SEGGER_RTT_Read)
-    SEGGER_RTT_ReadNoLock                    0x08002851   Thumb Code   116  segger_rtt.o(i.SEGGER_RTT_ReadNoLock)
-    SEGGER_RTT_Write                         0x080028c9   Thumb Code    50  segger_rtt.o(i.SEGGER_RTT_Write)
-    SEGGER_RTT_WriteNoLock                   0x08002901   Thumb Code    86  segger_rtt.o(i.SEGGER_RTT_WriteNoLock)
-    SysTick_Handler                          0x0800295d   Thumb Code     4  stm32f1xx_it.o(i.SysTick_Handler)
-    SystemClock_Config                       0x08002961   Thumb Code   120  main.o(i.SystemClock_Config)
-    SystemInit                               0x080029d9   Thumb Code    56  system_stm32f1xx.o(i.SystemInit)
-    TIM6_IRQHandler                          0x08002a21   Thumb Code     6  stm32f1xx_it.o(i.TIM6_IRQHandler)
-    TIM_Base_SetConfig                       0x08002a2d   Thumb Code   112  stm32f1xx_hal_tim.o(i.TIM_Base_SetConfig)
-    UsageFault_Handler                       0x08002cef   Thumb Code     2  stm32f1xx_it.o(i.UsageFault_Handler)
-    _Error_Handler                           0x08002d59   Thumb Code     2  main.o(i._Error_Handler)
-    __0printf$1                              0x08002e0d   Thumb Code    22  printf1.o(i.__0printf$1)
-    __1printf$1                              0x08002e0d   Thumb Code     0  printf1.o(i.__0printf$1)
-    __2printf                                0x08002e0d   Thumb Code     0  printf1.o(i.__0printf$1)
-    __scatterload_copy                       0x08002e2d   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08002e3b   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08002e3d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    fputc                                    0x08002fa1   Thumb Code    20  usart.o(i.fputc)
-    main                                     0x08002fb9   Thumb Code    46  main.o(i.main)
-    osDelay                                  0x08003005   Thumb Code    14  cmsis_os.o(i.osDelay)
-    osKernelStart                            0x08003013   Thumb Code    10  cmsis_os.o(i.osKernelStart)
-    osSystickHandler                         0x0800301d   Thumb Code    20  cmsis_os.o(i.osSystickHandler)
-    osThreadCreate                           0x08003031   Thumb Code    56  cmsis_os.o(i.osThreadCreate)
-    prvIsNewTCB                              0x080032f1   Thumb Code    18  trckernelport.o(i.prvIsNewTCB)
-    prvIsValidCommand                        0x08003309   Thumb Code    58  trcstreamingrecorder.o(i.prvIsValidCommand)
-    prvProcessCommand                        0x08003343   Thumb Code    14  trcstreamingrecorder.o(i.prvProcessCommand)
-    prvTraceError                            0x080034dd   Thumb Code    38  trcstreamingrecorder.o(i.prvTraceError)
-    prvTraceGetCurrentTaskHandle             0x08003531   Thumb Code     4  trckernelport.o(i.prvTraceGetCurrentTaskHandle)
-    prvTraceInitCortexM                      0x08003535   Thumb Code    54  trcstreamingrecorder.o(i.prvTraceInitCortexM)
-    prvTraceOnBegin                          0x0800357d   Thumb Code     2  trckernelport.o(i.prvTraceOnBegin)
-    prvTraceOnEnd                            0x0800357f   Thumb Code     2  trckernelport.o(i.prvTraceOnEnd)
-    prvTraceSaveObjectData                   0x08003581   Thumb Code    84  trcstreamingrecorder.o(i.prvTraceSaveObjectData)
-    prvTraceSaveSymbol                       0x080035dd   Thumb Code   120  trcstreamingrecorder.o(i.prvTraceSaveSymbol)
-    prvTraceStoreEvent                       0x0800365d   Thumb Code   110  trcstreamingrecorder.o(i.prvTraceStoreEvent)
-    prvTraceStoreEvent0                      0x080036d5   Thumb Code    70  trcstreamingrecorder.o(i.prvTraceStoreEvent0)
-    prvTraceStoreEvent1                      0x08003725   Thumb Code    76  trcstreamingrecorder.o(i.prvTraceStoreEvent1)
-    prvTraceStoreEvent2                      0x08003779   Thumb Code    80  trcstreamingrecorder.o(i.prvTraceStoreEvent2)
-    prvTraceStoreEvent3                      0x080037d1   Thumb Code    84  trcstreamingrecorder.o(i.prvTraceStoreEvent3)
-    prvTraceStoreStringEvent                 0x0800382d   Thumb Code    26  trcstreamingrecorder.o(i.prvTraceStoreStringEvent)
-    pvPortMalloc                             0x08003aed   Thumb Code   192  heap_4.o(i.pvPortMalloc)
-    pxPortInitialiseStack                    0x08003bb1   Thumb Code    28  port.o(i.pxPortInitialiseStack)
-    uGetTemperature                          0x08003bd1   Thumb Code    34  solder.o(i.uGetTemperature)
-    uxListRemove                             0x08003c05   Thumb Code    36  list.o(i.uxListRemove)
-    vLed1Task                                0x08003c29   Thumb Code    18  freertos.o(i.vLed1Task)
-    vLed2Task                                0x08003c41   Thumb Code    18  freertos.o(i.vLed2Task)
-    vLed3Task                                0x08003c59   Thumb Code    22  freertos.o(i.vLed3Task)
-    vLed4Task                                0x08003c75   Thumb Code    22  freertos.o(i.vLed4Task)
-    vListInitialise                          0x08003c91   Thumb Code    22  list.o(i.vListInitialise)
-    vListInitialiseItem                      0x08003ca7   Thumb Code     6  list.o(i.vListInitialiseItem)
-    vListInsert                              0x08003cad   Thumb Code    48  list.o(i.vListInsert)
-    vListInsertEnd                           0x08003cdd   Thumb Code    24  list.o(i.vListInsertEnd)
-    vPortEnterCritical                       0x08003cf5   Thumb Code    46  port.o(i.vPortEnterCritical)
-    vPortExitCritical                        0x08003d2d   Thumb Code    30  port.o(i.vPortExitCritical)
-    vPortFree                                0x08003d51   Thumb Code    78  heap_4.o(i.vPortFree)
-    vPortSetupTimerInterrupt                 0x08003da5   Thumb Code    26  port.o(i.vPortSetupTimerInterrupt)
-    vPortYield                               0x08003dc5   Thumb Code    18  port.o(i.vPortYield)
-    vPrintfTask                              0x08003ddd   Thumb Code    22  freertos.o(i.vPrintfTask)
-    vSensor1Task                             0x08003e09   Thumb Code    52  freertos.o(i.vSensor1Task)
-    vTaskDelay                               0x08003e59   Thumb Code    84  tasks.o(i.vTaskDelay)
-    vTaskStartScheduler                      0x08003eb1   Thumb Code    66  tasks.o(i.vTaskStartScheduler)
-    vTaskSuspendAll                          0x08003f05   Thumb Code    10  tasks.o(i.vTaskSuspendAll)
-    vTaskSwitchContext                       0x08003f15   Thumb Code    98  tasks.o(i.vTaskSwitchContext)
-    vTempCtrl                                0x08003f81   Thumb Code    34  solder.o(i.vTempCtrl)
-    vTraceEnable                             0x08003fad   Thumb Code   192  trckernelport.o(i.vTraceEnable)
-    vTracePrintF                             0x080040ad   Thumb Code    72  trcstreamingrecorder.o(i.vTracePrintF)
-    xPortStartScheduler                      0x080040f5   Thumb Code   102  port.o(i.xPortStartScheduler)
-    xPortSysTickHandler                      0x08004169   Thumb Code    30  port.o(i.xPortSysTickHandler)
-    xTaskGenericCreate                       0x0800418d   Thumb Code   444  tasks.o(i.xTaskGenericCreate)
-    xTaskGetCurrentTaskHandle                0x08004351   Thumb Code     6  tasks.o(i.xTaskGetCurrentTaskHandle)
-    xTaskGetSchedulerState                   0x0800435d   Thumb Code    22  tasks.o(i.xTaskGetSchedulerState)
-    xTaskIncrementTick                       0x08004379   Thumb Code   224  tasks.o(i.xTaskIncrementTick)
-    xTaskResumeAll                           0x08004465   Thumb Code   170  tasks.o(i.xTaskResumeAll)
-    xTraceRegisterString                     0x08004519   Thumb Code    26  trcstreamingrecorder.o(i.xTraceRegisterString)
-    AHBPrescTable                            0x080045ac   Data          16  system_stm32f1xx.o(.constdata)
-    APBPrescTable                            0x080045bc   Data           8  system_stm32f1xx.o(.constdata)
-    Region$$Table$$Base                      0x0800460c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800462c   Number         0  anon$$obj.o(Region$$Table)
+    HAL_UART_Receive                         0x08002445   Thumb Code   204  stm32f1xx_hal_uart.o(i.HAL_UART_Receive)
+    HAL_UART_Transmit                        0x08002511   Thumb Code   204  stm32f1xx_hal_uart.o(i.HAL_UART_Transmit)
+    HardFault_Handler                        0x080025dd   Thumb Code     2  stm32f1xx_it.o(i.HardFault_Handler)
+    MX_ADC1_Init                             0x080025e1   Thumb Code   150  adc.o(i.MX_ADC1_Init)
+    MX_DMA_Init                              0x08002691   Thumb Code    40  dma.o(i.MX_DMA_Init)
+    MX_FREERTOS_Init                         0x080026bd   Thumb Code   140  freertos.o(i.MX_FREERTOS_Init)
+    MX_GPIO_Init                             0x08002751   Thumb Code   120  gpio.o(i.MX_GPIO_Init)
+    MX_USART2_UART_Init                      0x080027d5   Thumb Code    52  usart.o(i.MX_USART2_UART_Init)
+    MemManage_Handler                        0x08002821   Thumb Code     2  stm32f1xx_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x08002823   Thumb Code     2  stm32f1xx_it.o(i.NMI_Handler)
+    SEGGER_RTT_ConfigDownBuffer              0x08002845   Thumb Code    90  segger_rtt.o(i.SEGGER_RTT_ConfigDownBuffer)
+    SEGGER_RTT_ConfigUpBuffer                0x080028a5   Thumb Code    90  segger_rtt.o(i.SEGGER_RTT_ConfigUpBuffer)
+    SEGGER_RTT_Read                          0x08002905   Thumb Code    24  segger_rtt.o(i.SEGGER_RTT_Read)
+    SEGGER_RTT_ReadNoLock                    0x0800291d   Thumb Code   116  segger_rtt.o(i.SEGGER_RTT_ReadNoLock)
+    SEGGER_RTT_Write                         0x08002995   Thumb Code    50  segger_rtt.o(i.SEGGER_RTT_Write)
+    SEGGER_RTT_WriteNoLock                   0x080029cd   Thumb Code    86  segger_rtt.o(i.SEGGER_RTT_WriteNoLock)
+    SysTick_Handler                          0x08002a29   Thumb Code     4  stm32f1xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x08002a2d   Thumb Code   120  main.o(i.SystemClock_Config)
+    SystemInit                               0x08002aa5   Thumb Code    56  system_stm32f1xx.o(i.SystemInit)
+    TIM6_IRQHandler                          0x08002aed   Thumb Code     6  stm32f1xx_it.o(i.TIM6_IRQHandler)
+    TIM_Base_SetConfig                       0x08002af9   Thumb Code   112  stm32f1xx_hal_tim.o(i.TIM_Base_SetConfig)
+    UsageFault_Handler                       0x08002dbb   Thumb Code     2  stm32f1xx_it.o(i.UsageFault_Handler)
+    _Error_Handler                           0x08002e25   Thumb Code     2  main.o(i._Error_Handler)
+    __0printf$3                              0x08002ed9   Thumb Code    22  printf3.o(i.__0printf$3)
+    __1printf$3                              0x08002ed9   Thumb Code     0  printf3.o(i.__0printf$3)
+    __2printf                                0x08002ed9   Thumb Code     0  printf3.o(i.__0printf$3)
+    __scatterload_copy                       0x08002ef9   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08002f07   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08002f09   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    fputc                                    0x080030d1   Thumb Code    20  usart.o(i.fputc)
+    main                                     0x080030e9   Thumb Code    46  main.o(i.main)
+    osDelay                                  0x08003135   Thumb Code    14  cmsis_os.o(i.osDelay)
+    osKernelStart                            0x08003143   Thumb Code    10  cmsis_os.o(i.osKernelStart)
+    osSystickHandler                         0x0800314d   Thumb Code    20  cmsis_os.o(i.osSystickHandler)
+    osThreadCreate                           0x08003161   Thumb Code    56  cmsis_os.o(i.osThreadCreate)
+    prvIsNewTCB                              0x08003421   Thumb Code    18  trckernelport.o(i.prvIsNewTCB)
+    prvIsValidCommand                        0x08003439   Thumb Code    58  trcstreamingrecorder.o(i.prvIsValidCommand)
+    prvProcessCommand                        0x08003473   Thumb Code    14  trcstreamingrecorder.o(i.prvProcessCommand)
+    prvTraceError                            0x0800360d   Thumb Code    38  trcstreamingrecorder.o(i.prvTraceError)
+    prvTraceGetCurrentTaskHandle             0x08003661   Thumb Code     4  trckernelport.o(i.prvTraceGetCurrentTaskHandle)
+    prvTraceInitCortexM                      0x08003665   Thumb Code    54  trcstreamingrecorder.o(i.prvTraceInitCortexM)
+    prvTraceOnBegin                          0x080036ad   Thumb Code     2  trckernelport.o(i.prvTraceOnBegin)
+    prvTraceOnEnd                            0x080036af   Thumb Code     2  trckernelport.o(i.prvTraceOnEnd)
+    prvTraceSaveObjectData                   0x080036b1   Thumb Code    84  trcstreamingrecorder.o(i.prvTraceSaveObjectData)
+    prvTraceSaveSymbol                       0x0800370d   Thumb Code   120  trcstreamingrecorder.o(i.prvTraceSaveSymbol)
+    prvTraceStoreEvent                       0x0800378d   Thumb Code   110  trcstreamingrecorder.o(i.prvTraceStoreEvent)
+    prvTraceStoreEvent0                      0x08003805   Thumb Code    70  trcstreamingrecorder.o(i.prvTraceStoreEvent0)
+    prvTraceStoreEvent1                      0x08003855   Thumb Code    76  trcstreamingrecorder.o(i.prvTraceStoreEvent1)
+    prvTraceStoreEvent2                      0x080038a9   Thumb Code    80  trcstreamingrecorder.o(i.prvTraceStoreEvent2)
+    prvTraceStoreEvent3                      0x08003901   Thumb Code    84  trcstreamingrecorder.o(i.prvTraceStoreEvent3)
+    prvTraceStoreStringEvent                 0x08003a19   Thumb Code    26  trcstreamingrecorder.o(i.prvTraceStoreStringEvent)
+    pvPortMalloc                             0x08003cd9   Thumb Code   192  heap_4.o(i.pvPortMalloc)
+    pxPortInitialiseStack                    0x08003d9d   Thumb Code    28  port.o(i.pxPortInitialiseStack)
+    uGetTemperature                          0x08003dbd   Thumb Code    34  solder.o(i.uGetTemperature)
+    uxListRemove                             0x08003df1   Thumb Code    36  list.o(i.uxListRemove)
+    vLed1Task                                0x08003e15   Thumb Code    72  freertos.o(i.vLed1Task)
+    vLed2Task                                0x08003e8d   Thumb Code    18  freertos.o(i.vLed2Task)
+    vLed3Task                                0x08003ea5   Thumb Code    22  freertos.o(i.vLed3Task)
+    vLed4Task                                0x08003ec1   Thumb Code    22  freertos.o(i.vLed4Task)
+    vListInitialise                          0x08003edd   Thumb Code    22  list.o(i.vListInitialise)
+    vListInitialiseItem                      0x08003ef3   Thumb Code     6  list.o(i.vListInitialiseItem)
+    vListInsert                              0x08003ef9   Thumb Code    48  list.o(i.vListInsert)
+    vListInsertEnd                           0x08003f29   Thumb Code    24  list.o(i.vListInsertEnd)
+    vPortEnterCritical                       0x08003f41   Thumb Code    46  port.o(i.vPortEnterCritical)
+    vPortExitCritical                        0x08003f79   Thumb Code    30  port.o(i.vPortExitCritical)
+    vPortFree                                0x08003f9d   Thumb Code    78  heap_4.o(i.vPortFree)
+    vPortSetupTimerInterrupt                 0x08003ff1   Thumb Code    26  port.o(i.vPortSetupTimerInterrupt)
+    vPortYield                               0x08004011   Thumb Code    18  port.o(i.vPortYield)
+    vPrintfTask                              0x08004029   Thumb Code    22  freertos.o(i.vPrintfTask)
+    vSensor1Task                             0x08004055   Thumb Code    52  freertos.o(i.vSensor1Task)
+    vTaskDelay                               0x080040a5   Thumb Code    84  tasks.o(i.vTaskDelay)
+    vTaskStartScheduler                      0x080040fd   Thumb Code    66  tasks.o(i.vTaskStartScheduler)
+    vTaskSuspendAll                          0x08004151   Thumb Code    10  tasks.o(i.vTaskSuspendAll)
+    vTaskSwitchContext                       0x08004161   Thumb Code    98  tasks.o(i.vTaskSwitchContext)
+    vTempCtrl                                0x080041cd   Thumb Code    34  solder.o(i.vTempCtrl)
+    vTraceEnable                             0x080041f9   Thumb Code   192  trckernelport.o(i.vTraceEnable)
+    vTracePrint                              0x080042f9   Thumb Code     4  trcstreamingrecorder.o(i.vTracePrint)
+    vTracePrintF                             0x080042fd   Thumb Code    72  trcstreamingrecorder.o(i.vTracePrintF)
+    xPortStartScheduler                      0x08004345   Thumb Code   102  port.o(i.xPortStartScheduler)
+    xPortSysTickHandler                      0x080043b9   Thumb Code    30  port.o(i.xPortSysTickHandler)
+    xTaskGenericCreate                       0x080043dd   Thumb Code   444  tasks.o(i.xTaskGenericCreate)
+    xTaskGetCurrentTaskHandle                0x080045a1   Thumb Code     6  tasks.o(i.xTaskGetCurrentTaskHandle)
+    xTaskGetSchedulerState                   0x080045ad   Thumb Code    22  tasks.o(i.xTaskGetSchedulerState)
+    xTaskIncrementTick                       0x080045c9   Thumb Code   224  tasks.o(i.xTaskIncrementTick)
+    xTaskResumeAll                           0x080046b5   Thumb Code   170  tasks.o(i.xTaskResumeAll)
+    xTraceRegisterString                     0x08004769   Thumb Code    26  trcstreamingrecorder.o(i.xTraceRegisterString)
+    AHBPrescTable                            0x080047fc   Data          16  system_stm32f1xx.o(.constdata)
+    APBPrescTable                            0x0800480c   Data           8  system_stm32f1xx.o(.constdata)
+    Region$$Table$$Base                      0x0800485c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800487c   Number         0  anon$$obj.o(Region$$Table)
     led1TaskHandle                           0x20000000   Data           4  freertos.o(.data)
     led2TaskHandle                           0x20000004   Data           4  freertos.o(.data)
     led3TaskHandle                           0x20000008   Data           4  freertos.o(.data)
@@ -2689,14 +2699,15 @@ Image Symbol Table
     MaxBytesTruncated                        0x200000e4   Data           4  trcstreamingrecorder.o(.data)
     __stdout                                 0x200000ec   Data           4  stdout.o(.data)
     uiADC                                    0x200000f0   Data          20  freertos.o(.bss)
-    htim6                                    0x20000104   Data          60  stm32f1xx_hal_timebase_tim.o(.bss)
-    huart2                                   0x20000140   Data          64  usart.o(.bss)
-    hadc1                                    0x20000180   Data          48  adc.o(.bss)
-    hdma_adc1                                0x200001b0   Data          56  adc.o(.bss)
-    _TzTraceData                             0x20002ad8   Data        5000  trckernelport.o(.bss)
-    PageInfo                                 0x200044e0   Data          16  trcstreamingrecorder.o(.bss)
-    _SEGGER_RTT                              0x200044f0   Data         168  segger_rtt.o(.bss)
-    __initial_sp                             0x200049e8   Data           0  startup_stm32f103xe.o(STACK)
+    cGetChar                                 0x20000104   Data        1024  freertos.o(.bss)
+    htim6                                    0x20000504   Data          60  stm32f1xx_hal_timebase_tim.o(.bss)
+    huart2                                   0x20000540   Data          64  usart.o(.bss)
+    hadc1                                    0x20000580   Data          48  adc.o(.bss)
+    hdma_adc1                                0x200005b0   Data          56  adc.o(.bss)
+    _TzTraceData                             0x20002ed8   Data        5000  trckernelport.o(.bss)
+    PageInfo                                 0x200048e0   Data          16  trcstreamingrecorder.o(.bss)
+    _SEGGER_RTT                              0x200048f0   Data         168  segger_rtt.o(.bss)
+    __initial_sp                             0x20004de8   Data           0  startup_stm32f103xe.o(STACK)
 
 
 
@@ -2706,9 +2717,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000131
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000471c, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000496c, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000462c, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000487c, Max: 0x00080000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2803,122 +2814,125 @@ Memory Map of the image
     0x0800238c   0x00000002   Code   RO         3173    i.HAL_TIM_TriggerCallback  stm32f1xx_hal_tim.o
     0x0800238e   0x0000005e   Code   RO         1825    i.HAL_UART_Init     stm32f1xx_hal_uart.o
     0x080023ec   0x00000058   Code   RO          302    i.HAL_UART_MspInit  usart.o
-    0x08002444   0x000000cc   Code   RO         1833    i.HAL_UART_Transmit  stm32f1xx_hal_uart.o
-    0x08002510   0x00000002   Code   RO          355    i.HardFault_Handler  stm32f1xx_it.o
-    0x08002512   0x00000002   PAD
-    0x08002514   0x000000b0   Code   RO          536    i.MX_ADC1_Init      adc.o
-    0x080025c4   0x0000002c   Code   RO          576    i.MX_DMA_Init       dma.o
-    0x080025f0   0x00000094   Code   RO            4    i.MX_FREERTOS_Init  freertos.o
-    0x08002684   0x00000084   Code   RO          441    i.MX_GPIO_Init      gpio.o
-    0x08002708   0x0000004c   Code   RO          303    i.MX_USART2_UART_Init  usart.o
-    0x08002754   0x00000002   Code   RO          356    i.MemManage_Handler  stm32f1xx_it.o
-    0x08002756   0x00000002   Code   RO          357    i.NMI_Handler       stm32f1xx_it.o
-    0x08002758   0x00000020   Code   RO         2901    i.NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x08002778   0x00000060   Code   RO         4413    i.SEGGER_RTT_ConfigDownBuffer  segger_rtt.o
-    0x080027d8   0x00000060   Code   RO         4414    i.SEGGER_RTT_ConfigUpBuffer  segger_rtt.o
-    0x08002838   0x00000018   Code   RO         4419    i.SEGGER_RTT_Read   segger_rtt.o
-    0x08002850   0x00000078   Code   RO         4420    i.SEGGER_RTT_ReadNoLock  segger_rtt.o
-    0x080028c8   0x00000038   Code   RO         4428    i.SEGGER_RTT_Write  segger_rtt.o
-    0x08002900   0x0000005c   Code   RO         4429    i.SEGGER_RTT_WriteNoLock  segger_rtt.o
-    0x0800295c   0x00000004   Code   RO          358    i.SysTick_Handler   stm32f1xx_it.o
-    0x08002960   0x00000078   Code   RO          466    i.SystemClock_Config  main.o
-    0x080029d8   0x00000048   Code   RO          643    i.SystemInit        system_stm32f1xx.o
-    0x08002a20   0x0000000c   Code   RO          359    i.TIM6_IRQHandler   stm32f1xx_it.o
-    0x08002a2c   0x00000084   Code   RO         3174    i.TIM_Base_SetConfig  stm32f1xx_hal_tim.o
-    0x08002ab0   0x0000003c   Code   RO         4088    i.TzCtrl            trckernelport.o
-    0x08002aec   0x00000170   Code   RO         1844    i.UART_SetConfig    stm32f1xx_hal_uart.o
-    0x08002c5c   0x00000092   Code   RO         1846    i.UART_WaitOnFlagUntilTimeout  stm32f1xx_hal_uart.o
-    0x08002cee   0x00000002   Code   RO          360    i.UsageFault_Handler  stm32f1xx_it.o
-    0x08002cf0   0x00000068   Code   RO         4433    i._DoInit           segger_rtt.o
-    0x08002d58   0x00000002   Code   RO          467    i._Error_Handler    main.o
-    0x08002d5a   0x00000016   Code   RO         4434    i._GetAvailWriteSpace  segger_rtt.o
-    0x08002d70   0x0000005a   Code   RO         4436    i._WriteBlocking    segger_rtt.o
-    0x08002dca   0x00000042   Code   RO         4437    i._WriteNoCheck     segger_rtt.o
-    0x08002e0c   0x00000020   Code   RO         4674    i.__0printf$1       mc_w.l(printf1.o)
-    0x08002e2c   0x0000000e   Code   RO         4934    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08002e3a   0x00000002   Code   RO         4935    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08002e3c   0x0000000e   Code   RO         4936    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08002e4a   0x00000002   PAD
-    0x08002e4c   0x00000154   Code   RO         4681    i._printf_core      mc_w.l(printf1.o)
-    0x08002fa0   0x00000018   Code   RO          304    i.fputc             usart.o
-    0x08002fb8   0x00000040   Code   RO          468    i.main              main.o
-    0x08002ff8   0x0000000c   Code   RO          688    i.makeFreeRtosPriority  cmsis_os.o
-    0x08003004   0x0000000e   Code   RO          689    i.osDelay           cmsis_os.o
-    0x08003012   0x0000000a   Code   RO          692    i.osKernelStart     cmsis_os.o
-    0x0800301c   0x00000014   Code   RO          721    i.osSystickHandler  cmsis_os.o
-    0x08003030   0x00000038   Code   RO          722    i.osThreadCreate    cmsis_os.o
-    0x08003068   0x00000034   Code   RO         1449    i.prvAddCurrentTaskToDelayedList  tasks.o
-    0x0800309c   0x00000150   Code   RO         4089    i.prvCheckRecorderStatus  trckernelport.o
-    0x080031ec   0x00000054   Code   RO         1450    i.prvCheckTasksWaitingTermination  tasks.o
-    0x08003240   0x0000004c   Code   RO         1223    i.prvHeapInit       heap_4.o
-    0x0800328c   0x00000018   Code   RO         1451    i.prvIdleTask       tasks.o
-    0x080032a4   0x0000004c   Code   RO         1224    i.prvInsertBlockIntoFreeList  heap_4.o
-    0x080032f0   0x00000018   Code   RO         4090    i.prvIsNewTCB       trckernelport.o
-    0x08003308   0x0000003a   Code   RO         4176    i.prvIsValidCommand  trcstreamingrecorder.o
-    0x08003342   0x0000000e   Code   RO         4180    i.prvProcessCommand  trcstreamingrecorder.o
-    0x08003350   0x00000020   Code   RO         1453    i.prvResetNextTaskUnblockTime  tasks.o
-    0x08003370   0x00000154   Code   RO         4181    i.prvSetRecorderEnabled  trcstreamingrecorder.o
-    0x080034c4   0x00000018   Code   RO         1120    i.prvTaskExitError  port.o
-    0x080034dc   0x00000054   Code   RO         4184    i.prvTraceError     trcstreamingrecorder.o
-    0x08003530   0x00000004   Code   RO         4091    i.prvTraceGetCurrentTaskHandle  trckernelport.o
-    0x08003534   0x00000048   Code   RO         4185    i.prvTraceInitCortexM  trcstreamingrecorder.o
-    0x0800357c   0x00000002   Code   RO         4093    i.prvTraceOnBegin   trckernelport.o
-    0x0800357e   0x00000002   Code   RO         4094    i.prvTraceOnEnd     trckernelport.o
-    0x08003580   0x0000005c   Code   RO         4186    i.prvTraceSaveObjectData  trcstreamingrecorder.o
-    0x080035dc   0x00000080   Code   RO         4187    i.prvTraceSaveSymbol  trcstreamingrecorder.o
-    0x0800365c   0x00000078   Code   RO         4188    i.prvTraceStoreEvent  trcstreamingrecorder.o
-    0x080036d4   0x00000050   Code   RO         4189    i.prvTraceStoreEvent0  trcstreamingrecorder.o
-    0x08003724   0x00000054   Code   RO         4190    i.prvTraceStoreEvent1  trcstreamingrecorder.o
-    0x08003778   0x00000058   Code   RO         4191    i.prvTraceStoreEvent2  trcstreamingrecorder.o
-    0x080037d0   0x0000005c   Code   RO         4192    i.prvTraceStoreEvent3  trcstreamingrecorder.o
-    0x0800382c   0x0000001a   Code   RO         4194    i.prvTraceStoreStringEvent  trcstreamingrecorder.o
-    0x08003846   0x00000002   PAD
-    0x08003848   0x000000ec   Code   RO         4195    i.prvTraceStoreStringEventHelper  trcstreamingrecorder.o
-    0x08003934   0x000001b8   Code   RO         4196    i.prvTraceStoreWarnings  trcstreamingrecorder.o
-    0x08003aec   0x000000c4   Code   RO         1225    i.pvPortMalloc      heap_4.o
-    0x08003bb0   0x00000020   Code   RO         1121    i.pxPortInitialiseStack  port.o
-    0x08003bd0   0x00000034   Code   RO          600    i.uGetTemperature   solder.o
-    0x08003c04   0x00000024   Code   RO         1743    i.uxListRemove      list.o
-    0x08003c28   0x00000018   Code   RO            5    i.vLed1Task         freertos.o
-    0x08003c40   0x00000018   Code   RO            6    i.vLed2Task         freertos.o
-    0x08003c58   0x0000001c   Code   RO            7    i.vLed3Task         freertos.o
-    0x08003c74   0x0000001c   Code   RO            8    i.vLed4Task         freertos.o
-    0x08003c90   0x00000016   Code   RO         1744    i.vListInitialise   list.o
-    0x08003ca6   0x00000006   Code   RO         1745    i.vListInitialiseItem  list.o
-    0x08003cac   0x00000030   Code   RO         1746    i.vListInsert       list.o
-    0x08003cdc   0x00000018   Code   RO         1747    i.vListInsertEnd    list.o
-    0x08003cf4   0x00000038   Code   RO         1123    i.vPortEnterCritical  port.o
-    0x08003d2c   0x00000024   Code   RO         1124    i.vPortExitCritical  port.o
-    0x08003d50   0x00000054   Code   RO         1226    i.vPortFree         heap_4.o
-    0x08003da4   0x00000020   Code   RO         1125    i.vPortSetupTimerInterrupt  port.o
-    0x08003dc4   0x00000018   Code   RO         1127    i.vPortYield        port.o
-    0x08003ddc   0x0000002c   Code   RO            9    i.vPrintfTask       freertos.o
-    0x08003e08   0x00000050   Code   RO           10    i.vSensor1Task      freertos.o
-    0x08003e58   0x00000058   Code   RO         1463    i.vTaskDelay        tasks.o
-    0x08003eb0   0x00000054   Code   RO         1475    i.vTaskStartScheduler  tasks.o
-    0x08003f04   0x00000010   Code   RO         1477    i.vTaskSuspendAll   tasks.o
-    0x08003f14   0x0000006c   Code   RO         1478    i.vTaskSwitchContext  tasks.o
-    0x08003f80   0x0000002c   Code   RO          601    i.vTempCtrl         solder.o
-    0x08003fac   0x00000100   Code   RO         4095    i.vTraceEnable      trckernelport.o
-    0x080040ac   0x00000048   Code   RO         4201    i.vTracePrintF      trcstreamingrecorder.o
-    0x080040f4   0x00000074   Code   RO         1128    i.xPortStartScheduler  port.o
-    0x08004168   0x00000024   Code   RO         1129    i.xPortSysTickHandler  port.o
-    0x0800418c   0x000001c4   Code   RO         1480    i.xTaskGenericCreate  tasks.o
-    0x08004350   0x0000000c   Code   RO         1483    i.xTaskGetCurrentTaskHandle  tasks.o
-    0x0800435c   0x0000001c   Code   RO         1484    i.xTaskGetSchedulerState  tasks.o
-    0x08004378   0x000000ec   Code   RO         1487    i.xTaskIncrementTick  tasks.o
-    0x08004464   0x000000b4   Code   RO         1493    i.xTaskResumeAll    tasks.o
-    0x08004518   0x0000001a   Code   RO         4208    i.xTraceRegisterString  trcstreamingrecorder.o
-    0x08004532   0x00000002   PAD
-    0x08004534   0x00000078   Data   RO           13    .constdata          freertos.o
-    0x080045ac   0x00000010   Data   RO          644    .constdata          system_stm32f1xx.o
-    0x080045bc   0x00000008   Data   RO          645    .constdata          system_stm32f1xx.o
-    0x080045c4   0x00000047   Data   RO           14    .conststring        freertos.o
-    0x0800460b   0x00000001   PAD
-    0x0800460c   0x00000020   Data   RO         4932    Region$$Table       anon$$obj.o
+    0x08002444   0x000000cc   Code   RO         1828    i.HAL_UART_Receive  stm32f1xx_hal_uart.o
+    0x08002510   0x000000cc   Code   RO         1833    i.HAL_UART_Transmit  stm32f1xx_hal_uart.o
+    0x080025dc   0x00000002   Code   RO          355    i.HardFault_Handler  stm32f1xx_it.o
+    0x080025de   0x00000002   PAD
+    0x080025e0   0x000000b0   Code   RO          536    i.MX_ADC1_Init      adc.o
+    0x08002690   0x0000002c   Code   RO          576    i.MX_DMA_Init       dma.o
+    0x080026bc   0x00000094   Code   RO            4    i.MX_FREERTOS_Init  freertos.o
+    0x08002750   0x00000084   Code   RO          441    i.MX_GPIO_Init      gpio.o
+    0x080027d4   0x0000004c   Code   RO          303    i.MX_USART2_UART_Init  usart.o
+    0x08002820   0x00000002   Code   RO          356    i.MemManage_Handler  stm32f1xx_it.o
+    0x08002822   0x00000002   Code   RO          357    i.NMI_Handler       stm32f1xx_it.o
+    0x08002824   0x00000020   Code   RO         2901    i.NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x08002844   0x00000060   Code   RO         4413    i.SEGGER_RTT_ConfigDownBuffer  segger_rtt.o
+    0x080028a4   0x00000060   Code   RO         4414    i.SEGGER_RTT_ConfigUpBuffer  segger_rtt.o
+    0x08002904   0x00000018   Code   RO         4419    i.SEGGER_RTT_Read   segger_rtt.o
+    0x0800291c   0x00000078   Code   RO         4420    i.SEGGER_RTT_ReadNoLock  segger_rtt.o
+    0x08002994   0x00000038   Code   RO         4428    i.SEGGER_RTT_Write  segger_rtt.o
+    0x080029cc   0x0000005c   Code   RO         4429    i.SEGGER_RTT_WriteNoLock  segger_rtt.o
+    0x08002a28   0x00000004   Code   RO          358    i.SysTick_Handler   stm32f1xx_it.o
+    0x08002a2c   0x00000078   Code   RO          466    i.SystemClock_Config  main.o
+    0x08002aa4   0x00000048   Code   RO          643    i.SystemInit        system_stm32f1xx.o
+    0x08002aec   0x0000000c   Code   RO          359    i.TIM6_IRQHandler   stm32f1xx_it.o
+    0x08002af8   0x00000084   Code   RO         3174    i.TIM_Base_SetConfig  stm32f1xx_hal_tim.o
+    0x08002b7c   0x0000003c   Code   RO         4088    i.TzCtrl            trckernelport.o
+    0x08002bb8   0x00000170   Code   RO         1844    i.UART_SetConfig    stm32f1xx_hal_uart.o
+    0x08002d28   0x00000092   Code   RO         1846    i.UART_WaitOnFlagUntilTimeout  stm32f1xx_hal_uart.o
+    0x08002dba   0x00000002   Code   RO          360    i.UsageFault_Handler  stm32f1xx_it.o
+    0x08002dbc   0x00000068   Code   RO         4433    i._DoInit           segger_rtt.o
+    0x08002e24   0x00000002   Code   RO          467    i._Error_Handler    main.o
+    0x08002e26   0x00000016   Code   RO         4434    i._GetAvailWriteSpace  segger_rtt.o
+    0x08002e3c   0x0000005a   Code   RO         4436    i._WriteBlocking    segger_rtt.o
+    0x08002e96   0x00000042   Code   RO         4437    i._WriteNoCheck     segger_rtt.o
+    0x08002ed8   0x00000020   Code   RO         4718    i.__0printf$3       mc_w.l(printf3.o)
+    0x08002ef8   0x0000000e   Code   RO         4934    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08002f06   0x00000002   Code   RO         4935    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08002f08   0x0000000e   Code   RO         4936    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08002f16   0x00000002   PAD
+    0x08002f18   0x000001b8   Code   RO         4725    i._printf_core      mc_w.l(printf3.o)
+    0x080030d0   0x00000018   Code   RO          304    i.fputc             usart.o
+    0x080030e8   0x00000040   Code   RO          468    i.main              main.o
+    0x08003128   0x0000000c   Code   RO          688    i.makeFreeRtosPriority  cmsis_os.o
+    0x08003134   0x0000000e   Code   RO          689    i.osDelay           cmsis_os.o
+    0x08003142   0x0000000a   Code   RO          692    i.osKernelStart     cmsis_os.o
+    0x0800314c   0x00000014   Code   RO          721    i.osSystickHandler  cmsis_os.o
+    0x08003160   0x00000038   Code   RO          722    i.osThreadCreate    cmsis_os.o
+    0x08003198   0x00000034   Code   RO         1449    i.prvAddCurrentTaskToDelayedList  tasks.o
+    0x080031cc   0x00000150   Code   RO         4089    i.prvCheckRecorderStatus  trckernelport.o
+    0x0800331c   0x00000054   Code   RO         1450    i.prvCheckTasksWaitingTermination  tasks.o
+    0x08003370   0x0000004c   Code   RO         1223    i.prvHeapInit       heap_4.o
+    0x080033bc   0x00000018   Code   RO         1451    i.prvIdleTask       tasks.o
+    0x080033d4   0x0000004c   Code   RO         1224    i.prvInsertBlockIntoFreeList  heap_4.o
+    0x08003420   0x00000018   Code   RO         4090    i.prvIsNewTCB       trckernelport.o
+    0x08003438   0x0000003a   Code   RO         4176    i.prvIsValidCommand  trcstreamingrecorder.o
+    0x08003472   0x0000000e   Code   RO         4180    i.prvProcessCommand  trcstreamingrecorder.o
+    0x08003480   0x00000020   Code   RO         1453    i.prvResetNextTaskUnblockTime  tasks.o
+    0x080034a0   0x00000154   Code   RO         4181    i.prvSetRecorderEnabled  trcstreamingrecorder.o
+    0x080035f4   0x00000018   Code   RO         1120    i.prvTaskExitError  port.o
+    0x0800360c   0x00000054   Code   RO         4184    i.prvTraceError     trcstreamingrecorder.o
+    0x08003660   0x00000004   Code   RO         4091    i.prvTraceGetCurrentTaskHandle  trckernelport.o
+    0x08003664   0x00000048   Code   RO         4185    i.prvTraceInitCortexM  trcstreamingrecorder.o
+    0x080036ac   0x00000002   Code   RO         4093    i.prvTraceOnBegin   trckernelport.o
+    0x080036ae   0x00000002   Code   RO         4094    i.prvTraceOnEnd     trckernelport.o
+    0x080036b0   0x0000005c   Code   RO         4186    i.prvTraceSaveObjectData  trcstreamingrecorder.o
+    0x0800370c   0x00000080   Code   RO         4187    i.prvTraceSaveSymbol  trcstreamingrecorder.o
+    0x0800378c   0x00000078   Code   RO         4188    i.prvTraceStoreEvent  trcstreamingrecorder.o
+    0x08003804   0x00000050   Code   RO         4189    i.prvTraceStoreEvent0  trcstreamingrecorder.o
+    0x08003854   0x00000054   Code   RO         4190    i.prvTraceStoreEvent1  trcstreamingrecorder.o
+    0x080038a8   0x00000058   Code   RO         4191    i.prvTraceStoreEvent2  trcstreamingrecorder.o
+    0x08003900   0x0000005c   Code   RO         4192    i.prvTraceStoreEvent3  trcstreamingrecorder.o
+    0x0800395c   0x000000bc   Code   RO         4193    i.prvTraceStoreSimpleStringEventHelper  trcstreamingrecorder.o
+    0x08003a18   0x0000001a   Code   RO         4194    i.prvTraceStoreStringEvent  trcstreamingrecorder.o
+    0x08003a32   0x00000002   PAD
+    0x08003a34   0x000000ec   Code   RO         4195    i.prvTraceStoreStringEventHelper  trcstreamingrecorder.o
+    0x08003b20   0x000001b8   Code   RO         4196    i.prvTraceStoreWarnings  trcstreamingrecorder.o
+    0x08003cd8   0x000000c4   Code   RO         1225    i.pvPortMalloc      heap_4.o
+    0x08003d9c   0x00000020   Code   RO         1121    i.pxPortInitialiseStack  port.o
+    0x08003dbc   0x00000034   Code   RO          600    i.uGetTemperature   solder.o
+    0x08003df0   0x00000024   Code   RO         1743    i.uxListRemove      list.o
+    0x08003e14   0x00000078   Code   RO            5    i.vLed1Task         freertos.o
+    0x08003e8c   0x00000018   Code   RO            6    i.vLed2Task         freertos.o
+    0x08003ea4   0x0000001c   Code   RO            7    i.vLed3Task         freertos.o
+    0x08003ec0   0x0000001c   Code   RO            8    i.vLed4Task         freertos.o
+    0x08003edc   0x00000016   Code   RO         1744    i.vListInitialise   list.o
+    0x08003ef2   0x00000006   Code   RO         1745    i.vListInitialiseItem  list.o
+    0x08003ef8   0x00000030   Code   RO         1746    i.vListInsert       list.o
+    0x08003f28   0x00000018   Code   RO         1747    i.vListInsertEnd    list.o
+    0x08003f40   0x00000038   Code   RO         1123    i.vPortEnterCritical  port.o
+    0x08003f78   0x00000024   Code   RO         1124    i.vPortExitCritical  port.o
+    0x08003f9c   0x00000054   Code   RO         1226    i.vPortFree         heap_4.o
+    0x08003ff0   0x00000020   Code   RO         1125    i.vPortSetupTimerInterrupt  port.o
+    0x08004010   0x00000018   Code   RO         1127    i.vPortYield        port.o
+    0x08004028   0x0000002c   Code   RO            9    i.vPrintfTask       freertos.o
+    0x08004054   0x00000050   Code   RO           10    i.vSensor1Task      freertos.o
+    0x080040a4   0x00000058   Code   RO         1463    i.vTaskDelay        tasks.o
+    0x080040fc   0x00000054   Code   RO         1475    i.vTaskStartScheduler  tasks.o
+    0x08004150   0x00000010   Code   RO         1477    i.vTaskSuspendAll   tasks.o
+    0x08004160   0x0000006c   Code   RO         1478    i.vTaskSwitchContext  tasks.o
+    0x080041cc   0x0000002c   Code   RO          601    i.vTempCtrl         solder.o
+    0x080041f8   0x00000100   Code   RO         4095    i.vTraceEnable      trckernelport.o
+    0x080042f8   0x00000004   Code   RO         4200    i.vTracePrint       trcstreamingrecorder.o
+    0x080042fc   0x00000048   Code   RO         4201    i.vTracePrintF      trcstreamingrecorder.o
+    0x08004344   0x00000074   Code   RO         1128    i.xPortStartScheduler  port.o
+    0x080043b8   0x00000024   Code   RO         1129    i.xPortSysTickHandler  port.o
+    0x080043dc   0x000001c4   Code   RO         1480    i.xTaskGenericCreate  tasks.o
+    0x080045a0   0x0000000c   Code   RO         1483    i.xTaskGetCurrentTaskHandle  tasks.o
+    0x080045ac   0x0000001c   Code   RO         1484    i.xTaskGetSchedulerState  tasks.o
+    0x080045c8   0x000000ec   Code   RO         1487    i.xTaskIncrementTick  tasks.o
+    0x080046b4   0x000000b4   Code   RO         1493    i.xTaskResumeAll    tasks.o
+    0x08004768   0x0000001a   Code   RO         4208    i.xTraceRegisterString  trcstreamingrecorder.o
+    0x08004782   0x00000002   PAD
+    0x08004784   0x00000078   Data   RO           13    .constdata          freertos.o
+    0x080047fc   0x00000010   Data   RO          644    .constdata          system_stm32f1xx.o
+    0x0800480c   0x00000008   Data   RO          645    .constdata          system_stm32f1xx.o
+    0x08004814   0x00000047   Data   RO           14    .conststring        freertos.o
+    0x0800485b   0x00000001   PAD
+    0x0800485c   0x00000020   Data   RO         4932    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x000049e8, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00004de8, Max: 0x00010000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2932,16 +2946,16 @@ Memory Map of the image
     0x20000080   0x0000001c   Data   RW         4100    .data               trckernelport.o
     0x2000009c   0x00000050   Data   RW         4211    .data               trcstreamingrecorder.o
     0x200000ec   0x00000004   Data   RW         4912    .data               mc_w.l(stdout.o)
-    0x200000f0   0x00000014   Zero   RW           12    .bss                freertos.o
-    0x20000104   0x0000003c   Zero   RW          256    .bss                stm32f1xx_hal_timebase_tim.o
-    0x20000140   0x00000040   Zero   RW          305    .bss                usart.o
-    0x20000180   0x00000068   Zero   RW          537    .bss                adc.o
-    0x200001e8   0x00002800   Zero   RW         1230    .bss                heap_4.o
-    0x200029e8   0x000000f0   Zero   RW         1495    .bss                tasks.o
-    0x20002ad8   0x000013a8   Zero   RW         4099    .bss                trckernelport.o
-    0x20003e80   0x00000670   Zero   RW         4210    .bss                trcstreamingrecorder.o
-    0x200044f0   0x000000f8   Zero   RW         4438    .bss                segger_rtt.o
-    0x200045e8   0x00000400   Zero   RW          677    STACK               startup_stm32f103xe.o
+    0x200000f0   0x00000414   Zero   RW           12    .bss                freertos.o
+    0x20000504   0x0000003c   Zero   RW          256    .bss                stm32f1xx_hal_timebase_tim.o
+    0x20000540   0x00000040   Zero   RW          305    .bss                usart.o
+    0x20000580   0x00000068   Zero   RW          537    .bss                adc.o
+    0x200005e8   0x00002800   Zero   RW         1230    .bss                heap_4.o
+    0x20002de8   0x000000f0   Zero   RW         1495    .bss                tasks.o
+    0x20002ed8   0x000013a8   Zero   RW         4099    .bss                trckernelport.o
+    0x20004280   0x00000670   Zero   RW         4210    .bss                trcstreamingrecorder.o
+    0x200048f0   0x000000f8   Zero   RW         4438    .bss                segger_rtt.o
+    0x200049e8   0x00000400   Zero   RW          677    STACK               startup_stm32f103xe.o
 
 
 ==============================================================================
@@ -2955,7 +2969,7 @@ Image component sizes
        112          0          0          0          0       7708   cmsis_os.o
         44          4          0          0          0        686   dma.o
          0          0          0          0          0       1472   event_groups.o
-       376         82        191         24         20     538790   freertos.o
+       472        124        191         24       1044     539107   freertos.o
        132         12          0          0          0        839   gpio.o
        432         24          0         24      10240       4159   heap_4.o
        136          0          0          0          0       3250   list.o
@@ -2975,16 +2989,16 @@ Image component sizes
        578         20          0          0          0       6510   stm32f1xx_hal_tim.o
          4          0          0          0          0       1486   stm32f1xx_hal_tim_ex.o
        116         16          0          0         60       2604   stm32f1xx_hal_timebase_tim.o
-       812          4          0          0          0       3888   stm32f1xx_hal_uart.o
+      1016          4          0          0          0       5043   stm32f1xx_hal_uart.o
         40         12          0          0          0       3596   stm32f1xx_it.o
         72         16         24          4          0       1079   system_stm32f1xx.o
       1396        102          0         56        240      13515   tasks.o
        684        302          0         28       5032       5093   trckernelport.o
-      2052        468          0         80       1648      24542   trcstreamingrecorder.o
+      2244        478          0         80       1648      26640   trcstreamingrecorder.o
        188         42          0          0         64       2018   usart.o
 
     ----------------------------------------------------------------------
-     15896       1686        552        236      18680     704041   Object Totals
+     16388       1738        552        236      19704     707611   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         22          0          1          0          0          0   (incl. Padding)
 
@@ -3008,7 +3022,7 @@ Image component sizes
         32          0          0          0          0         68   llushr.o
         36          0          0          0          0         68   memcpya.o
         36          0          0          0          0        108   memseta.o
-       372         14          0          0          0        184   printf1.o
+       472         14          0          0          0        184   printf3.o
          0          0          0          4          0          0   stdout.o
         18          0          0          0          0         68   strcpy.o
         44          0          0          0          0         80   uidiv.o
@@ -3019,18 +3033,18 @@ Image component sizes
        228          0          0          0          0         96   dmul.o
 
     ----------------------------------------------------------------------
-      1516         30          0          4          0       1352   Library Totals
+      1616         30          0          4          0       1352   Library Totals
          2          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-       690         30          0          4          0        780   mc_w.l
+       790         30          0          4          0        780   mc_w.l
        824          0          0          0          0        572   mf_w.l
 
     ----------------------------------------------------------------------
-      1516         30          0          4          0       1352   Library Totals
+      1616         30          0          4          0       1352   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -3039,15 +3053,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     17412       1716        552        240      18680     696965   Grand Totals
-     17412       1716        552        240      18680     696965   ELF Image Totals
-     17412       1716        552        240          0          0   ROM Totals
+     18004       1768        552        240      19704     700379   Grand Totals
+     18004       1768        552        240      19704     700379   ELF Image Totals
+     18004       1768        552        240          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                17964 (  17.54kB)
-    Total RW  Size (RW Data + ZI Data)             18920 (  18.48kB)
-    Total ROM Size (Code + RO Data + RW Data)      18204 (  17.78kB)
+    Total RO  Size (Code + RO Data)                18556 (  18.12kB)
+    Total RW  Size (RW Data + ZI Data)             19944 (  19.48kB)
+    Total ROM Size (Code + RO Data + RW Data)      18796 (  18.36kB)
 
 ==============================================================================
 

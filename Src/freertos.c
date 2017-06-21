@@ -55,6 +55,7 @@
 #include "adc.h"
 #include "solder.h"
 #include "usart.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Variables -----------------------------------------------------------------*/
@@ -66,8 +67,9 @@ osThreadId printfTaskHandle;
 osThreadId sensor1TaskHandle;
 
 /* USER CODE BEGIN Variables */
-uint8_t  cPrint[1024];
+char  cPrint[1024];
 volatile uint16_t uiADC[10];
+char  cGetChar[1024];
 /* USER CODE END Variables */
 
 /* Function prototypes -------------------------------------------------------*/
@@ -201,8 +203,29 @@ __weak void vLed1Task(void const * argument)
   /* Infinite loop */
   for(;;)
   {
+    int state;
     HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
-  //  if(HAL_UART_Receive(&UartHandle, (uint8_t *)aRxBuffer, RXBUFFERSIZE, 0xFFFFFFF) != HAL_OK)
+    state = HAL_UART_Receive(&huart2, (uint8_t *)cGetChar, 2, 0x10);//0XFFFFFFFF is waitting forever
+    if( state!= HAL_OK)
+    {
+      //       traceString UART_Error = xTraceRegisterString("UART_STATE");
+//       vTracePrintF(UART_Error,"ERROR %d",state);
+      traceString UART_STATE = xTraceRegisterString("UART_STATE");
+      vTracePrintF(UART_STATE,"STATE:%d",state);
+     // int ch;
+    //  FILE *stream;
+   //   stream = fmemopen (cGetChar, 1, "r");//strlen (buffer)
+//while ((ch = fgetc (stream)) != EOF)
+      
+      //fclose (stream);
+    }
+    else
+    {
+      printf ("Got %c\n", cGetChar[0]);
+      traceString U_sended = xTraceRegisterString("UART_STATE");
+      vTracePrint(U_sended,"GOT");
+    }
+      //printf("I get the data:%c",cGetChar);
  //   HAL_UART_Transmit(&huart2,(uint8_t *)uiADC,3,0xfffff);
    // HAL_UART_Transmit(&huart2,(uint8_t *)uiADC,3,0xfffff);
     osDelay(10);
