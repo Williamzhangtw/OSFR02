@@ -108,10 +108,10 @@ int main(void)
   MX_ADC1_Init();
 
   /* USER CODE BEGIN 2 */
-  setvbuf(stdin, NULL, _IONBF, 0);
-  char c =getchar();
-  printf("I get:%c",c );
-  printf("Hello world!\n");
+//  setvbuf(stdin, NULL, _IONBF, 0);
+//  char c =getchar();
+ // printf("I get:%c",c );
+ // printf("Hello world!\n");
   /* Init only, trace starts later...*/
  // vTraceEnable(TRC_INIT);
   vTraceEnable(TRC_START_AWAIT_HOST);
